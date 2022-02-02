@@ -1,11 +1,13 @@
 {
   "name": "@unlocked/foundation",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/library.js",
   "module": "dist/library.mjs",
   "files": [
-    "dist/*"
+    "dist/*",
+    "/src/*",
+    "/tailwind.config.js"
   ],
   "scripts": {
     "build": "rollup -c",
@@ -18,8 +20,15 @@
     "vue": "^3.2.21"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "7",
     "rollup": "^2.67.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-vue": "^6.0.0"
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.49.7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "~3.9.7"
   }
 }

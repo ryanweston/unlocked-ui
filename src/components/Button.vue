@@ -1,5 +1,5 @@
 <template>
-  <input type="text" />
+  <input class="u-input" type="text" />
 </template>
 
 <script lang="ts">
@@ -9,3 +9,9 @@ export default defineComponent({
   name: 'Button'
 })
 </script>
+
+<style lang="postcss" scoped>
+.u-input {
+  @apply bg-black text-blue border-blue;
+}
+</style>

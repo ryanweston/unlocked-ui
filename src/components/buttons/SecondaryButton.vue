@@ -1,11 +1,11 @@
 <template>
-  <input type="text" />
+  <input class="bg-blue" type="text" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Button2'
+  name: 'SecondaryButton'
 })
 </script>

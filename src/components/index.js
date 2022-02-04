@@ -1,4 +1,4 @@
-import { default as Button } from './Button.vue'
-import { default as Button2 } from './Button2.vue'
+import { default as PrimaryButton } from './buttons/PrimaryButton.vue'
+import { default as SecondaryButton } from './buttons/SecondaryButton.vue'
 
-export default { Button, Button2 }
+export default { PrimaryButton, SecondaryButton }

@@ -1,7 +1,8 @@
 import vue from 'rollup-plugin-vue'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
-import scss from 'rollup-plugin-scss';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+
 
 export default [
   {
@@ -17,12 +18,12 @@ export default [
       }
     ],
     plugins: [
-      peerDepsExternal(),
-      vue({ preprocessStyles: true }), 
+      vue(),
       postcss({ 
         plugins: []
       }), 
-      // scss(),
-    ]
+      nodeResolve(),
+      peerDepsExternal(),
+    ],
   }
 ]

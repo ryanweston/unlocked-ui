@@ -1,19 +1,15 @@
 <template>
-  <input class="bg-blue t-button" type="text" />
+  <div class="bg-black pa-5 ma-5 h-40 w-40"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import BaseButton from '../base'
 
 export default defineComponent({
-  name: 'PrimaryButton',
-  extends: BaseButton,
+  name: 'Test',
   props: {
     callback: Function,
     contactsPromise: Promise
   }
 })
 </script>
-
-

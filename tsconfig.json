@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "preserveConstEnums": true,
+    "target": "es6",
+    "module": "esnext",
+    "declaration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": [
+    "src/components/**/*.vue",
+    "src/components/**/*.ts",
+    "src/components/**/*.d.ts",
+    "src/components/**/*.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

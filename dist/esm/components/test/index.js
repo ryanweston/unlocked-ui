@@ -1,3 +1,3 @@
-import './Test.vue.js';
-import script from './Test.vue_vue_type_script_lang.vue.js';
-export { default } from './Test.vue_vue_type_script_lang.vue.js';
+import Test from "./Test.js";
+export { default } from "./Test.js";
+//# sourceMappingURL=index.js.map

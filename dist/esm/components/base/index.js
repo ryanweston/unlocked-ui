@@ -1,3 +1,3 @@
-import './BaseButton.vue.js';
-import script from './BaseButton.vue_vue_type_script_lang.vue.js';
-export { default } from './BaseButton.vue_vue_type_script_lang.vue.js';
+import BaseButton from "./BaseButton.js";
+export { default } from "./BaseButton.js";
+//# sourceMappingURL=index.js.map

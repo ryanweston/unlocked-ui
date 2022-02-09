@@ -1,5 +1,8 @@
 <template>
-  <input class="bg-blue t-button" type="text" />
+  <input
+    class="bg-blue t-button"
+    type="text"
+  >
 </template>
 
 <script lang="ts">

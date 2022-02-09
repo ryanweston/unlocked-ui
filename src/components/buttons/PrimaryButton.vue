@@ -1,6 +1,6 @@
 <template>
   <input
-    class="bg-blue t-button"
+    class="bg-blue-600 t-button"
     type="text"
   >
 </template>

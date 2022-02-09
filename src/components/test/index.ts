@@ -1,3 +1,7 @@
-import Test from './Test.vue'
+import { installComponent } from '../../utils/install'
+import Test from './TestComponent.vue'
 
-export default Test
+export const UTestComponent = installComponent(Test)
+export default UTestComponent
+
+export * from './TestComponent.vue'

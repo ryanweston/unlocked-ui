@@ -1,6 +1,6 @@
 {
   "name": "@unlocked/foundation",
-  "version": "0.3.5",
+  "version": "0.3.8",
   "description": "",
   "main": "./dist/umd",
   "module": "./dist/esm",

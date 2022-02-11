@@ -1,5 +1,5 @@
 <template>
-  <input type="text" />
+  <input type="text">
 </template>
 
 <script lang="ts">
@@ -8,8 +8,14 @@ export default defineComponent({
   name: 'BaseButton',
   props: {
     child: VueElement,
-    onFocus: Object,
-    onClick: Function,
+    onFocus: { 
+      type: Function,
+      default: () => { return },
+    },
+    onClick: { 
+      type: Function,
+      default: () => { return },
+    },
   }
 })
 </script>

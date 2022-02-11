@@ -1,15 +1,28 @@
 <template>
-  <div class="bg-black pa-5 ma-5 h-40 w-40" />
+  <div :class="styles" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { withTheme } from '../../theme'
 
 export default defineComponent({
   name: 'TestComponent',
   props: {
-    callback: Function,
+    callback: {
+      type: Function,
+      default: () => { return },
+      required: false
+    },
     contactsPromise: Promise
+  },
+  setup(props) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const styles = withTheme('test')
+    console.log(styles)
+    console.log(props)
+    return { styles }
   }
 })
 </script>

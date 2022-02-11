@@ -1,6 +1,6 @@
 {
   "name": "@unlocked/foundation",
-  "version": "0.5.9",
+  "version": "0.8.7",
   "description": "",
   "main": "./dist/umd",
   "module": "./dist/esm",
@@ -24,6 +24,7 @@
     "@headlessui/vue": "^1.0.0",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@vitejs/plugin-vue": "^2.1.0",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.8.0",

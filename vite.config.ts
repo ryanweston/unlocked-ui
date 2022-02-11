@@ -1,10 +1,10 @@
 
    
-import type { UserConfig } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 const path = require('path')
 
-const config: UserConfig = {
+export default defineConfig({
   alias: [
     {
       find: '@',
@@ -26,6 +26,7 @@ const config: UserConfig = {
       output: [{
         format: 'esm',
         dir: 'dist/esm',
+        minifyInternalExports: true,
         preserveModules: true,
         preserveModulesRoot: 'src',
         exports: 'named',
@@ -42,6 +43,4 @@ const config: UserConfig = {
       }],
     },
   },
-}
-
-export default config
+})

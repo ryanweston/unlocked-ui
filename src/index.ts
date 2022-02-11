@@ -1,20 +1,15 @@
-import components from './components'
-import { App } from 'vue'
 
-
-
-// Export components for individual import
+// Components
 export * from './components/index'
 
-const createPlugin = (components: any) => {
-    const install = (Vue: App) => {
-      components.forEach((c: any) => Vue.use(c))
-    }
-  
-    return { install }
-}
+// Themes
+export * from './theme/customTheme';
+export * from './theme/defaultTheme';
 
-// Export plugin installation method for global install
-export default createPlugin([...components])
+// Installers
+export * from './utils/modular-install'
+export * from './utils/global-install'
+
+
 
 

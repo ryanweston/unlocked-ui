@@ -1,0 +1,1 @@
+export default { button: 'mr-5' }

@@ -7,6 +7,9 @@ module.exports = {
     'plugin:vue/vue3-recommended',
   ],
   rules: {
+    'vue/multi-word-component-names': ['error', {
+      'ignores': ['default']
+    }],
     'vue/html-self-closing': ['error', {
       'html': {
         'void': 'never',

@@ -1,1 +1,1 @@
-export default { test: 'h60' }
+export default { test: 'h-60' }

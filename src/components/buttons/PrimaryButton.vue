@@ -1,8 +1,7 @@
 <template>
-  <input
-    :class="styles"
-    type="text"
-  >
+  <button :class="styles">
+    <slot />
+  </button>
 </template>
 
 <script lang="ts">

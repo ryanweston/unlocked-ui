@@ -1,2 +1,7 @@
 node_modules
 dist
+
+storybook-static
+
+# Remove when component story paths are fixed
+src/stories

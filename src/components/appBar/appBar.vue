@@ -19,7 +19,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const styles = withTheme('appBar')
-let classes = [styles.base]
+let classes: any = styles.base
 
 // TODO: Improve functionality & modularise into individual components in order to help with
 // slots and customisation of the app bar.
@@ -54,11 +54,13 @@ let classes = [styles.base]
         <!-- Left side -->
         <div :class="classes.logo.wrapper">
           <div :class="classes.logo.container">
+            <template v-if="logo">
+              <img :class="classes.logo.image" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
+              <img :class="classes.logo.mobileImage" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
+            </template>
             <h3 :class="classes.logo.text">
               Unlocked
             </h3>
-            <img :class="classes.logo.image" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
-            <img :class="classes.logo.mobileImage" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
           </div>
         </div>
 

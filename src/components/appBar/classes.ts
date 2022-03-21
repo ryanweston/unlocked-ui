@@ -1,7 +1,7 @@
 export default { 
   appBar: {
     base: { 
-      wrapper: 'px-6 py-4 rounded-lg',
+      wrapper: 'bg-white border-b border-gray-200',
       screenWrapper: 'max-w-7xl mx-auto px-2 sm:px-6 lg:px-8',
       screenContainer: 'relative flex items-center justify-between h-24',
       screenMenuWrapper: 'hidden lg:block absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0',

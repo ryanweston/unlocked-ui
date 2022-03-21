@@ -25,6 +25,17 @@ export default defineComponent({
     type: {
       type: String,
       default: 'default'
+    },
+    class: {
+      type: String,
+    },
+    appendIcon: {
+      type: Boolean,
+      default: false,
+    },
+    prefixIcon: {
+      type: Boolean,
+      default: false,
     }
   },
   setup(props) {
@@ -37,6 +48,10 @@ export default defineComponent({
       classes.push(styles.disabled)
     }
 
+    if (props.class) {
+      classes.push(props.class)
+    }
+
     console.log('styles', styles)
     console.log('props', props)
     console.log('classes', classes)
@@ -47,6 +62,12 @@ export default defineComponent({
 
 <template>
   <button :class="classes">
+    <div :class="prefixIcon ? 'mr-2' : ''">
+      <slot name="prefix-icon" />
+    </div>
     <slot />
+    <div :class="appendIcon ? 'ml-2' : ''">
+      <slot name="append-icon" />
+    </div>
   </button>
 </template>

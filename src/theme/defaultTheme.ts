@@ -1,6 +1,7 @@
 import button from '../components/button/classes'
 import test from '../components/test/classes'
 import base from '../components/test/classes'
+import appBar from '../components/appBar/classes'
 
 //Typography
 import headline from '../components/typography/headline/classes'
@@ -12,6 +13,7 @@ export const defaultTheme = {
   ...button,
   ...test,
   ...base,
+  ...appBar,
   ...headline,
   ...title,
   ...subtitle,

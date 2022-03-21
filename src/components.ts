@@ -1,6 +1,7 @@
 import { UBaseButton } from "./components/base";
 import { UButton } from "./components/button";
 import { UTestComponent } from "./components/test";
+import { UAppBar } from "./components/appBar"
 
 //Typography
 import { UHeadline } from "./components/typography/headline";
@@ -12,6 +13,7 @@ export default [
   UBaseButton, 
   UButton,
   UTestComponent,
+  UAppBar,
   UHeadline,
   UTitle,
   USubtitle,

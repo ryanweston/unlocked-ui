@@ -1,7 +1,7 @@
 import { installComponent } from '../../utils/install'
-import appBar from './button.vue'
+import appBar from './appBar.vue'
 
 export const UAppBar = installComponent(appBar)
 export default UAppBar
 
-export * from './button.vue'
+export * from './appBar.vue'

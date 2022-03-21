@@ -1,7 +1,7 @@
 export * from './base'
 export * from './button'
-export * from './test'
 export * from './appBar'
+export * from './footer'
 
 // Typography
 export * from './typography/headline'

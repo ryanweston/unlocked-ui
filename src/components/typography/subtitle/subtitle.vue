@@ -1,27 +1,26 @@
+<script lang="ts">
+export default { name: 'Subtitle' }
+</script>
+
+
+<script lang="ts" setup>
+import { withTheme } from '../../../theme'
+
+interface Props {
+  class: string
+}
+
+const props = defineProps<Props>()
+
+const styles = withTheme('subtitle')
+let classes = [styles.base]
+if (props.class) {
+  classes.push(props.class)
+}
+</script>
+
 <template>
   <h3 :class="classes">
     <slot />
   </h3>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { withTheme } from '../../../theme'
-
-export default defineComponent({
-  name: 'Subtitle',
-  props: {
-    callback: {
-      type: Function,
-      default: () => { return },
-      required: false
-    },
-    contactsPromise: Promise
-  },
-  setup() {
-    const styles = withTheme('subtitle')
-    let classes= [styles.base]
-    return { classes }
-  }
-})
-</script>

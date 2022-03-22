@@ -22,8 +22,8 @@ export default {
         wrapper: 'flex-1 flex items-center justify-center sm:items-stretch sm:justify-start',
         container: 'flex-shrink-0 flex items-center',
         text: 'hidden lg:block w-auto font-bold text-lg',
-        image: 'hidden lg:block h-8 w-auto',
-        mobileImage: 'block lg:hidden h-8 w-auto',
+        image: 'hidden lg:block h-10 w-auto',
+        mobileImage: 'block lg:hidden h-6 w-auto',
       },
       menuButton: {
         container: 'absolute inset-y-0 left-0 flex items-center sm:hidden',

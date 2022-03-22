@@ -1,3 +1,7 @@
+<script lang="ts">
+export default { name: 'AppBar'}
+</script>
+
 <script lang="ts" setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
@@ -14,6 +18,7 @@ interface Props {
  navigation: Array<Items>
  title: string,
  logo: boolean
+ logoUrl: string
 }
 
 const props = defineProps<Props>()
@@ -23,7 +28,6 @@ let classes: any = styles.base
 
 // TODO: Improve functionality & modularise into individual components in order to help with
 // slots and customisation of the app bar.
-
 </script>
 
 <template>
@@ -55,10 +59,10 @@ let classes: any = styles.base
         <div :class="classes.logo.wrapper">
           <div :class="classes.logo.container">
             <template v-if="logo">
-              <img :class="classes.logo.image" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
-              <img :class="classes.logo.mobileImage" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
+              <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow" />
+              <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow" />
             </template>
-            <h3 :class="classes.logo.text">
+            <h3 v-else :class="classes.logo.text">
               Unlocked
             </h3>
           </div>

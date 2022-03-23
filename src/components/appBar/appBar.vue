@@ -19,8 +19,9 @@ interface Items {
 interface Props {
  navigation: Array<Items>
  title: string,
- logo: boolean
- logoUrl: string
+ logo: boolean,
+ logoUrl: string,
+ logoHref: string
 }
 
 const props = defineProps<Props>()
@@ -62,12 +63,18 @@ let classes: any = styles.base
           <div :class="classes.logo.container">
             <slot name="leftSide">
               <template v-if="logo">
-                <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow" />
-                <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow" />
+                <a :href="props.logoHref">
+                  <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow" />
+                </a>
+                <a :href="props.logoHref">
+                  <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow" />
+                </a>
               </template>
-              <h3 v-else :class="classes.logo.text">
-                Unlocked
-              </h3>
+              <a v-else :href="props.logoHref">
+                <h3  :class="classes.logo.text">
+                  Unlocked
+                </h3>
+              </a>
             </slot>
           </div>
         </div>

@@ -4,26 +4,27 @@
 
 <script lang="ts" setup>
 import { withTheme } from '../../theme'
+import { useSlots } from 'vue'
 
 interface Props { 
   class: string,
   size: string,
   disabled: boolean,
   type: string,
-  appendIcon: boolean,
-  prefixIcon: boolean,
-  onClick: () => {}
-  ariaRole: string
+  ariaRole: string,
+  external: boolean,
+  href: string,
+  target: string
 }
-
+const emit = defineEmits(['click'])
 const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
   disabled: false,
   type: 'default',
-  appendIcon: false,
-  prefixIcon: false,
   ariaRole: 'button'
 })
+
+const slots = useSlots()
 
 const styles = withTheme('button')
 
@@ -40,13 +41,30 @@ if (props.class) {
 </script>
 
 <template>
-  <button @click="onClick()" :class="classes" :role="ariaRole">
-    <div :class="prefixIcon ? 'mr-2' : ''">
-      <slot name="prefix-icon" />
+  <!-- TODO: Find better way to do this -->
+  <a 
+    v-if="external" 
+    @click="e => emit('click', e)"
+    :class="classes"
+    :href="props.href"
+    :target="props.target"
+  >
+    <div v-if="$slots.prefixIcon" class="mr-2">
+      <slot name="prefixIcon" />
     </div>
     <slot />
-    <div :class="appendIcon ? 'ml-2' : ''">
-      <slot name="append-icon" />
+    <div v-if="$slots.appendIcon" class="ml-2">
+      <slot name="appendIcon" />
+    </div>
+  </a>
+
+  <button v-else @click="e => emit('click', e)" :class="classes" :role="ariaRole">
+    <div v-if="$slots.prefixIcon" class="mr-2">
+      <slot name="prefixIcon" />
+    </div>
+    <slot />
+    <div v-if="$slots.appendIcon" class="ml-2">
+      <slot name="appendIcon" />
     </div>
   </button>
 </template>

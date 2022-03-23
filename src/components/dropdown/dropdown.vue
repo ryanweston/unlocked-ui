@@ -32,10 +32,9 @@ let classes = [styles.base]
         <UButton
           type="text"
           size="small"
-          append-icon
         >
           Products
-          <template #append-icon>
+          <template #appendIcon>
             <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
           </template>
         </UButton>

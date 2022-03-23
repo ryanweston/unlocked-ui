@@ -1,6 +1,6 @@
-import { UBaseButton } from "./components/base";
-import { UButton } from "./components/button";
 import { UAppBar } from "./components/appBar"
+import { UButton } from "./components/button";
+import { UDropdown } from "./components/dropdown"
 import { UFooter } from "./components/footer"
 
 //Typography
@@ -10,9 +10,9 @@ import { USubtitle } from "./components/typography/subtitle";
 import { UBody } from "./components/typography/body";
 
 export default [ 
-  UBaseButton, 
-  UButton,
   UAppBar,
+  UButton,
+  UDropdown,
   UFooter,
   UHeadline,
   UTitle,

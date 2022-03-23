@@ -5,13 +5,15 @@ export default { name: 'AppBar'}
 <script lang="ts" setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { UButton } from '../button/index'
 
 import { withTheme } from '../../theme'
 
 interface Items {
   name: string,
   href: string,
-  current: string,
+  size: string,
+  type: string,
 }
 
 interface Props {
@@ -58,26 +60,29 @@ let classes: any = styles.base
         <!-- Left side -->
         <div :class="classes.logo.wrapper">
           <div :class="classes.logo.container">
-            <template v-if="logo">
-              <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow" />
-              <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow" />
-            </template>
-            <h3 v-else :class="classes.logo.text">
-              Unlocked
-            </h3>
+            <slot name="leftSide">
+              <template v-if="logo">
+                <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow" />
+                <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow" />
+              </template>
+              <h3 v-else :class="classes.logo.text">
+                Unlocked
+              </h3>
+            </slot>
           </div>
         </div>
 
         <!-- Right side -->
         <div :class="classes.screenMenuWrapper">
           <div :class="classes.screenMenuContainer">
-            <a
-              v-for="item in navigation"
-              :key="item.name"
-              :href="item.href"
-              :class="[item.current ? classes.screenMenuItem.active : classes.screenMenuItem.default, classes.screenMenuItem.base]"
-              :aria-current="item.current ? 'page' : undefined"
-            >{{ item.name }}</a>
+            <slot name="rightSide">
+              <UButton
+                v-for="item in navigation"
+                :size="item.size"
+                :type="item.type"
+                :key="item.name"
+              >{{ item.name }}</UButton>
+            </slot>
           </div>
         </div>
       </div>
@@ -91,8 +96,6 @@ let classes: any = styles.base
           :key="item.name"
           as="a"
           :href="item.href"
-          :class="[item.current ? classes.mobileMenuItem.active : classes.mobileMenuItem.default, classes.mobileMenuItem.base]"
-          :aria-current="item.current ? 'page' : undefined"
         >
           {{ item.name }}
         </DisclosureButton>

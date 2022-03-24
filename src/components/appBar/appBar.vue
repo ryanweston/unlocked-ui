@@ -96,6 +96,7 @@ let classes: any = styles.base
     </div>
 
     <!-- Mobile dropdown -->
+    <!-- TODO: Add slots -->
     <DisclosurePanel :class="classes.mobileWrapper">
       <div :class="classes.mobileContainer">
         <DisclosureButton
@@ -103,6 +104,7 @@ let classes: any = styles.base
           :key="item.name"
           as="a"
           :href="item.href"
+          :class="[classes.mobileMenuItem.default, classes.mobileMenuItem.base]"
         >
           {{ item.name }}
         </DisclosureButton>

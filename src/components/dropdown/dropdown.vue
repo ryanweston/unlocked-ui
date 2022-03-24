@@ -12,6 +12,7 @@ interface Item {
   name: string,
   href: string,
   icon: string,
+  disabled: boolean,
 }
 
 interface Props {
@@ -45,7 +46,18 @@ let classes = [styles.base]
       <MenuItems class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
         <div class="py-1">
           <MenuItem v-for="item in menuItems" :key="item.name" v-slot="{ active }">
-              <a :href="item.href" :class="[active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 text-sm flex flex-row items-center']"><div v-html="item.icon"></div>{{ item.name }}</a>
+              <a 
+                :href="item.href"
+                :class="[
+                  active ? 'bg-gray-100 text-gray-900' 
+                    : 'text-gray-700', 
+                  item.disabled ? 'opacity-50 cursor-not-allowed pointer-events-none': '' ,
+                  'block px-4 py-2 text-sm flex flex-row items-center'
+                ]"
+              >
+                <div v-html="item.icon"></div>
+                {{ item.name }}
+              </a>
           </MenuItem>
         </div>
       </MenuItems>

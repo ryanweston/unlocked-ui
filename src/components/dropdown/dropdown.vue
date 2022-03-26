@@ -4,63 +4,78 @@ export default { name: 'Dropdown'}
 
 <script lang="ts" setup>
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
-import { UButton } from '../button'
+import { UButton } from '@/components/button'
+import { UItem } from '@/components/item'
+import { UIcon } from '@/components/icon'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
-import { withTheme } from '../../theme'
+import { withTheme } from '@/theme'
 
 interface Item {
   name: string,
   href: string,
   icon: string,
+  iconSrc: string,
   disabled: boolean,
 }
 
 interface Props {
- menuItems: Array<Item>
+  text: string,
+  items: Array<Item>
 }
 
 const props = defineProps<Props>()
 
 const styles = withTheme('dropdown')
 
-let classes = [styles.base]
+let classes: any = styles
 </script>
 
 <template>
-  <Menu as="div" class="relative inline-block text-left">
+  <Menu as="div" :class="classes.wrapper" v-slot="{ open }">
     <div>
       <MenuButton>
-        <UButton
-          type="text"
-          size="small"
-        >
-          Products
-          <template #appendIcon>
-            <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
-          </template>
-        </UButton>
+        <slot name="activator">
+          <UButton
+            type="text"
+            size="small"
+          >
+            {{ text }}
+            <template #appendIcon>
+              <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
+            </template>
+          </UButton>
+        </slot>
       </MenuButton>
     </div>
 
-    <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-      <MenuItems class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-        <div class="py-1">
-          <MenuItem v-for="item in menuItems" :key="item.name" v-slot="{ active }">
-              <a 
-                :href="item.href"
-                :class="[
-                  active ? 'bg-gray-100 text-gray-900' 
-                    : 'text-gray-700', 
-                  item.disabled ? 'opacity-50 cursor-not-allowed pointer-events-none': '' ,
-                  'block px-4 py-2 text-sm flex flex-row items-center'
-                ]"
-              >
-                <div v-html="item.icon"></div>
-                {{ item.name }}
-              </a>
-          </MenuItem>
-        </div>
-      </MenuItems>
-    </transition>
+    <div v-show="open">
+      <transition :enter-active-class="classes.transition.enterActiveClass" :enter-from-class="classes.transition.enterFromClass" :enter-to-class="classes.transition.enterToClass" :leave-active-class="classes.transition.leaveActiveClass" :leave-from-class="classes.transition.leaveFromClass" :leave-to-class="classes.transition.leaveToClass">
+        <slot name="menu">
+          <MenuItems :class="classes.menu">
+            <div v-for="item in items" :key="item.name">
+              <MenuItem as="div" v-slot="{ active }" :disabled="item.disabled">
+                <slot :active="active" :item="item">
+                  <UItem
+                    :href="item.href"
+                    :disabled="item.disabled"
+                    :active="active"
+                  > 
+                    <template v-if="item.iconSrc" #prefixIcon>
+                      <UIcon :src="item.iconSrc" />
+                    </template>
+                    <template v-else-if="item.icon" #prefixIcon>
+                      <UIcon>
+                        {{ item.icon }}
+                      </UIcon>
+                    </template>
+                    {{ item.name }}
+                  </UItem>
+                </slot>
+              </MenuItem>
+            </div>
+          </MenuItems>
+        </slot>
+      </transition>
+    </div>
   </Menu>
 </template>

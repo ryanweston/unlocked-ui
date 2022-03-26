@@ -2,8 +2,8 @@
 // Components
 export * from './components/index'
 
-// Themes
-export * from './theme/customTheme';
+// Theme & classes
+export * from './theme/classes'
 export * from './theme/defaultTheme';
 
 // Installers

@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 
 const createPlugin = () => {
   const install = async (app: App, options: any) => {

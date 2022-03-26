@@ -3,6 +3,9 @@ export * from './button'
 export * from './dropdown'
 export * from './footer'
 
+export * from './icon'
+export * from './item'
+
 // Typography
 export * from './typography/headline'
 export * from './typography/title'

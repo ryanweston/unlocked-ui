@@ -3,7 +3,7 @@ export default { name: 'Headline' }
 </script>
 
 <script lang="ts" setup>
-import { withTheme } from '../../../theme'
+import { withTheme } from '@/theme'
 interface Props {
   class: string
 }

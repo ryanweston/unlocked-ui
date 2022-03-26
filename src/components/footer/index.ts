@@ -1,4 +1,4 @@
-import { installComponent } from '../../utils/install'
+import { installComponent } from '@/utils/install'
 import Footer from './footer.vue'
 
 export const UFooter = installComponent(Footer)

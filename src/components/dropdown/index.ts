@@ -1,4 +1,4 @@
-import { installComponent } from '../../utils/install'
+import { installComponent } from '@/utils/install'
 import dropdown from './dropdown.vue'
 
 export const UDropdown = installComponent(dropdown)

@@ -1,4 +1,4 @@
-import { installComponent } from '../../../utils/install'
+import { installComponent } from '@/utils/install'
 import Subtitle from './subtitle.vue'
 
 export const USubtitle = installComponent(Subtitle)

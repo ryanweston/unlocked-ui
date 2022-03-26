@@ -1,4 +1,4 @@
-import { installComponent } from '../../../utils/install'
+import { installComponent } from '@/utils/install'
 import Title from './title.vue'
 
 export const UTitle = installComponent(Title)

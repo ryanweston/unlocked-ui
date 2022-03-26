@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts" setup>
-import { withTheme } from '../../theme'
+import { withTheme } from '@/theme'
 import { useSlots } from 'vue'
 
 interface Props { 
@@ -16,6 +16,7 @@ interface Props {
   href: string,
   target: string
 }
+
 const emit = defineEmits(['click'])
 const props = withDefaults(defineProps<Props>(), {
   size: 'medium',

@@ -3,7 +3,7 @@ export default { name: 'Footer'}
 </script>
 
 <script lang="ts" setup>
-import { withTheme } from '../../theme'
+import { withTheme } from '@/theme'
 
 interface Props {
   class: string
@@ -12,13 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const styles = withTheme('footer')
-
-// TODO: Fix typings for classes
-let classes: any = styles.base
-
-// if (props.class) {
-//   classes.push(props.class)
-// }
+const classes = styles
 </script>
 
 <template>

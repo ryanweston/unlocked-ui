@@ -3,11 +3,11 @@ export default { name: 'AppBar'}
 </script>
 
 <script lang="ts" setup>
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
-import { UButton } from '../button/index'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { UButton } from '@/components/button'
 
-import { withTheme } from '../../theme'
+import { withTheme } from '@/theme'
 
 interface Items {
   name: string,
@@ -27,7 +27,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const styles = withTheme('appBar')
-let classes: any = styles.base
+let classes = styles
 
 // TODO: Improve functionality & modularise into individual components in order to help with
 // slots and customisation of the app bar.
@@ -41,22 +41,25 @@ let classes: any = styles.base
   >
     <div :class="classes.screenWrapper">
       <div :class="classes.screenContainer">
+
         <!-- Mobile menu button-->
-        <div :class="classes.menuButton.container">
-          <DisclosureButton :class="classes.menuButton.button">
-            <span class="sr-only">Open main menu</span>
-            <MenuIcon
-              v-if="!open"
-              :class="classes.menuButton.icon"
-              aria-hidden="true"
-            />
-            <XIcon
-              v-else
-              :class="classes.menuButton.icon"
-              aria-hidden="true"
-            />
-          </DisclosureButton>
-        </div>
+        <slot name="mobileMenuButton">
+          <div :class="classes.menuButton.container">
+            <DisclosureButton :class="classes.menuButton.button">
+              <span class="sr-only">Open main menu</span>
+              <MenuIcon
+                v-if="!open"
+                :class="classes.menuButton.icon"
+                aria-hidden="true"
+              />
+              <XIcon
+                v-else
+                :class="classes.menuButton.icon"
+                aria-hidden="true"
+              />
+            </DisclosureButton>
+          </div>
+        </slot>
 
         <!-- Left side -->
         <div :class="classes.logo.wrapper">
@@ -99,15 +102,17 @@ let classes: any = styles.base
     <!-- TODO: Add slots -->
     <DisclosurePanel :class="classes.mobileWrapper">
       <div :class="classes.mobileContainer">
-        <DisclosureButton
-          v-for="item in navigation"
-          :key="item.name"
-          as="a"
-          :href="item.href"
-          :class="[classes.mobileMenuItem.default, classes.mobileMenuItem.base]"
-        >
-          {{ item.name }}
-        </DisclosureButton>
+        <slot name="mobileMenu">
+          <DisclosureButton
+            v-for="item in navigation"
+            :key="item.name"
+            as="a"
+            :href="item.href"
+            :class="[classes.mobileMenuItem.default, classes.mobileMenuItem.base]"
+          >
+            {{ item.name }}
+          </DisclosureButton>
+        </slot>
       </div>
     </DisclosurePanel>
   </Disclosure>

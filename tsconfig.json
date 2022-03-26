@@ -7,10 +7,16 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    },
     "outDir": "./dist/esm",
     "preserveConstEnums": true,
+    "preserveValueImports": true,
+    "importsNotUsedAsValues": "error",
     "target": "es6",
     "module": "esnext",
+    "jsx": "preserve",
     "declaration": true,
     "lib": [
       "dom",
@@ -20,14 +26,14 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "useDefineForClassFields": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    // "noEmit": true
   },
   "include": [
-    "src/**/**/*.vue",
+    "src/**/**/**/*.vue",
     "src/**/**/*.ts",
     "src/**/**/*.d.ts",
     "src/**/**/*.js"

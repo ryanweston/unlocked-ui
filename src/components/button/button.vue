@@ -25,6 +25,8 @@ const props = withDefaults(defineProps<Props>(), {
   ariaRole: 'button'
 })
 
+console.log(props)
+
 const slots = useSlots()
 
 const styles = withTheme('button')

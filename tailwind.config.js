@@ -1,20 +1,19 @@
-// const defaultTheme = require('tailwindcss/defaultTheme')
-// const unlockedTailwind = require('@unlocked/foundation/tailwind.config.js')
+// THIS TAILWIND CONFIG IS ONLY TO WORK WITH STORYBOOK.
 
-const tokens = require('./tokens.js');
+const tokens = require('./tokens.js')
 
 const colors = Object.fromEntries(Object
   .values(tokens.color)
   .map(({ attributes, value }) => [
-    attributes.type, value
-  ]));
+    attributes.type, value,
+  ]))
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     colors,
-  //  ...unlockedTailwind.theme,
+    //  ...unlockedTailwind.theme,
     fontFamily: {
       sans: ['"Inter var"'],
     },

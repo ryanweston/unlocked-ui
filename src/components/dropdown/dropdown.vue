@@ -1,7 +1,3 @@
-<script lang="ts">
-export default { name: 'Dropdown' }
-</script>
-
 <script lang="ts" setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/solid'

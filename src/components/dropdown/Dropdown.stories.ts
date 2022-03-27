@@ -1,11 +1,12 @@
+import type { Meta, Story } from '@storybook/vue3'
 import Dropdown from './dropdown.vue'
 
 export default {
   component: Dropdown,
   title: 'Components/Dropdown',
-}
+} as Meta
 
-const Template = args => ({
+const Template: Story = args => ({
   components: { Dropdown },
   setup() { return { args } },
   template: `<Dropdown 

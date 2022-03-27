@@ -6,7 +6,7 @@ export * as footerTheme from '@/components/footer/classes'
 export * as iconTheme from '@/components/icon/classes'
 export * as itemTheme from '@/components/item/classes'
 
-//Typography
+// Typography
 export * as headlineTheme from '@/components/typography/headline/classes'
 export * as titleTheme from '@/components/typography/title/classes'
 export * as subtitleTheme from '@/components/typography/subtitle/classes'

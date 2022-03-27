@@ -1,20 +1,20 @@
-import Button from './button.vue';
+import Button from './button.vue'
 
 export default {
   component: Button,
   title: 'Components/Button',
-};
+}
 
-// @ts-ignore
-const Template = (args) => ({
+// @ts-expect-error because it's broken
+const Template = args => ({
   components: { Button },
-  setup () { return { args }},
-  template: `<Button v-bind="args"> {{ args.defaultSlot }} </Button`,
-});
+  setup() { return { args } },
+  template: '<Button v-bind="args"> {{ args.defaultSlot }} </Button',
+})
 
-export const Default = Template.bind({});
-// @ts-ignore
+export const Default = Template.bind({})
+// @ts-expect-error because it's broken
 Default.args = {
   disabled: true,
-  defaultSlot: 'example'
-};
+  defaultSlot: 'example',
+}

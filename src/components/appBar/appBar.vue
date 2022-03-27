@@ -1,7 +1,3 @@
-<script lang="ts">
-export default { name: 'AppBar'}
-</script>
-
 <script lang="ts" setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
@@ -10,27 +6,31 @@ import { UButton } from '@/components/button'
 import { withTheme } from '@/theme'
 
 interface Items {
-  name: string,
-  href: string,
-  size: string,
-  type: string,
+  name: string
+  href: string
+  size: string
+  type: string
 }
 
 interface Props {
- navigation: Array<Items>
- title: string,
- logo: boolean,
- logoUrl: string,
- logoHref: string
+  navigation: Array<Items>
+  title: string
+  logo: boolean
+  logoUrl: string
+  logoHref: string
 }
 
 const props = defineProps<Props>()
 
 const styles = withTheme('appBar')
-let classes = styles
+const classes = styles
 
 // TODO: Improve functionality & modularise into individual components in order to help with
 // slots and customisation of the app bar.
+</script>
+
+<script lang="ts">
+export default { name: 'AppBar' }
 </script>
 
 <template>
@@ -41,7 +41,6 @@ let classes = styles
   >
     <div :class="classes.screenWrapper">
       <div :class="classes.screenContainer">
-
         <!-- Mobile menu button-->
         <slot name="mobileMenuButton">
           <div :class="classes.menuButton.container">
@@ -67,14 +66,14 @@ let classes = styles
             <slot name="leftSide">
               <template v-if="logo">
                 <a :href="props.logoHref">
-                  <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow" />
+                  <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow">
                 </a>
                 <a :href="props.logoHref">
-                  <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow" />
+                  <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow">
                 </a>
               </template>
               <a v-else :href="props.logoHref">
-                <h3  :class="classes.logo.text">
+                <h3 :class="classes.logo.text">
                   Unlocked
                 </h3>
               </a>
@@ -88,10 +87,12 @@ let classes = styles
             <slot name="rightSide">
               <UButton
                 v-for="item in navigation"
+                :key="item.name"
                 :size="item.size"
                 :type="item.type"
-                :key="item.name"
-              >{{ item.name }}</UButton>
+              >
+                {{ item.name }}
+              </UButton>
             </slot>
           </div>
         </div>

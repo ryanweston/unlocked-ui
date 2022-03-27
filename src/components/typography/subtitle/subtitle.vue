@@ -1,8 +1,3 @@
-<script lang="ts">
-export default { name: 'Subtitle' }
-</script>
-
-
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
 
@@ -13,10 +8,14 @@ interface Props {
 const props = defineProps<Props>()
 
 const styles = withTheme('subtitle')
-let classes = [styles.base]
-if (props.class) {
+const classes = [styles.base]
+if (props.class)
   classes.push(props.class)
-}
+
+</script>
+
+<script lang="ts">
+export default { name: 'Subtitle' }
 </script>
 
 <template>

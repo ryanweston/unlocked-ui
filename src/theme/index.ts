@@ -1,13 +1,11 @@
-import { inject } from "vue"
+import { inject } from 'vue'
 
 export const withTheme = (component: string) => {
   const theme: any = inject('themeConfig')
-  console.log('injectedTheme', theme)
 
-  let { [component]: styles }: any = theme
-  console.log('stylesLoader', styles)
+  const { [component]: styles }: any = theme
 
-  if (!styles) throw Error(`${component} has no theming`)
+  if (!styles) throw new Error(`${component} has no theming`)
 
   return styles
 }

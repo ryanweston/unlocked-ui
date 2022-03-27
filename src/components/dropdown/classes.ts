@@ -1,4 +1,4 @@
-export default { 
+export default {
   dropdown: {
     wrapper: 'relative inline-block text-left',
     transition: {

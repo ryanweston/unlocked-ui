@@ -1,4 +1,4 @@
-export default { 
+export default {
   appBar: {
     wrapper: 'bg-white border-b border-greyBorder',
     screenWrapper: 'max-w-7xl mx-auto px-2 sm:px-6 lg:px-8',
@@ -8,20 +8,20 @@ export default {
     screenMenuItem: {
       base: 'px-3 py-2 rounded-md text-sm font-medium',
       default: 'text-text hover:bg-greyLight',
-      active: 'bg-black text-textDark'
+      active: 'bg-black text-textDark',
     },
     mobileWrapper: 'sm:hidden',
     mobileContainer: 'px-2 pt-2 pb-3 space-y-1',
     mobileMenuItem: {
       base: 'block px-3 py-2 rounded-md text-base font-medium',
       default: 'text-text hover:bg-gray-700 hover:text-textDark',
-      active: 'bg-gray-900 text-textDark'
+      active: 'bg-gray-900 text-textDark',
     },
     menuButton: {
       container: 'absolute inset-y-0 left-0 flex items-center sm:hidden',
       button: 'inline-flex items-center justify-center p-2 rounded-md text-text hover:text-textDark hover:bg-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white',
       icon: 'block h-6 w-6',
-      closeIcon: 'text-text'
+      closeIcon: 'text-text',
     },
     logo: {
       wrapper: 'flex-1 flex items-center justify-center sm:items-stretch sm:justify-start',

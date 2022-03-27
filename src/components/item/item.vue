@@ -1,17 +1,13 @@
-<script lang="ts">
- export default { name: 'Item' }
-</script>
-
 <script lang="ts" setup>
-import { withTheme } from '@/theme'
 import { useSlots } from 'vue'
+import { withTheme } from '@/theme'
 
 interface Props {
-  active: boolean,
-  class: string,
-  disabled: boolean,
-  type: string,
-  href: string,
+  active: boolean
+  class: string
+  disabled: boolean
+  type: string
+  href: string
   target: string
 }
 
@@ -24,24 +20,26 @@ const slots = useSlots()
 
 const styles = withTheme('item')
 
-let classes = [styles.base]
+const classes = [styles.base]
 
-if (props.disabled) {
+if (props.disabled)
   classes.push(styles.disabled)
-}
 
-if (props.class) {
+if (props.class)
   classes.push(props.class)
-}
 
 </script>
 
+<script lang="ts">
+export default { name: 'Item' }
+</script>
+
 <template>
-  <a 
-    @click="e => emit('click', e)"
+  <a
     :class="[classes, active ? styles.hover : '']"
     :href="props.href"
     :target="props.target"
+    @click="e => emit('click', e)"
   >
     <div v-if="$slots.prefixIcon" class="mr-3">
       <slot name="prefixIcon" />

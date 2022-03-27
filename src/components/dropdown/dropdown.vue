@@ -1,25 +1,25 @@
 <script lang="ts">
-export default { name: 'Dropdown'}
+export default { name: 'Dropdown' }
 </script>
 
 <script lang="ts" setup>
-import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import { ChevronDownIcon } from '@heroicons/vue/solid'
 import { UButton } from '@/components/button'
 import { UItem } from '@/components/item'
 import { UIcon } from '@/components/icon'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
 import { withTheme } from '@/theme'
 
 interface Item {
-  name: string,
-  href: string,
-  icon: string,
-  iconSrc: string,
-  disabled: boolean,
+  name: string
+  href: string
+  icon: string
+  iconSrc: string
+  disabled: boolean
 }
 
 interface Props {
-  text: string,
+  text: string
   items: Array<Item>
 }
 
@@ -27,11 +27,15 @@ const props = defineProps<Props>()
 
 const styles = withTheme('dropdown')
 
-let classes: any = styles
+const classes: any = styles
+</script>
+
+<script lang="ts">
+export default { name: 'Dropdown' }
 </script>
 
 <template>
-  <Menu as="div" :class="classes.wrapper" v-slot="{ open }">
+  <Menu v-slot="{ open }" as="div" :class="classes.wrapper">
     <div>
       <MenuButton>
         <slot name="activator">
@@ -53,13 +57,13 @@ let classes: any = styles
         <slot name="menu">
           <MenuItems :class="classes.menu">
             <div v-for="item in items" :key="item.name">
-              <MenuItem as="div" v-slot="{ active }" :disabled="item.disabled">
+              <MenuItem v-slot="{ active }" as="div" :disabled="item.disabled">
                 <slot :active="active" :item="item">
                   <UItem
                     :href="item.href"
                     :disabled="item.disabled"
                     :active="active"
-                  > 
+                  >
                     <template v-if="item.iconSrc" #prefixIcon>
                       <UIcon :src="item.iconSrc" />
                     </template>

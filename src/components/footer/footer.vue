@@ -1,7 +1,3 @@
-<script lang="ts">
-export default { name: 'Footer'}
-</script>
-
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
 
@@ -15,10 +11,14 @@ const styles = withTheme('footer')
 const classes = styles
 </script>
 
+<script lang="ts">
+export default { name: 'Footer' }
+</script>
+
 <template>
   <div :class="classes.wrapper">
     <div :class="classes.container">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>

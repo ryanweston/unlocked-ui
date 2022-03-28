@@ -1,4 +1,4 @@
-# Unlocked
+# 🔒 Unlocked
 
 For more complete documentation, please refer to our [official documentation](docs.unlocked.to).
 

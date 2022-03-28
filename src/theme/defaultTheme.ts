@@ -2,6 +2,7 @@ import appBar from '@/components/appBar/classes'
 import button from '@/components/button/classes'
 import dropdown from '@/components/dropdown/classes'
 import footer from '@/components/footer/classes'
+import tooltip from '@/components/tooltip/classes'
 
 import icon from '@/components/icon/classes'
 import item from '@/components/item/classes'
@@ -18,6 +19,7 @@ export const defaultTheme = {
   ...dropdown,
   ...item,
   ...footer,
+  ...tooltip,
   ...icon,
   ...headline,
   ...title,

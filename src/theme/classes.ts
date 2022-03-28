@@ -3,6 +3,8 @@ export * as buttonTheme from '@/components/button/classes'
 export * as dropdownTheme from '@/components/dropdown/classes'
 export * as footerTheme from '@/components/footer/classes'
 
+export * as tooltipTheme from '@/components/tooltip/classes'
+
 export * as iconTheme from '@/components/icon/classes'
 export * as itemTheme from '@/components/item/classes'
 

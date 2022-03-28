@@ -2,6 +2,7 @@ export * from './appBar'
 export * from './button'
 export * from './dropdown'
 export * from './footer'
+export * from './tooltip'
 
 export * from './icon'
 export * from './item'

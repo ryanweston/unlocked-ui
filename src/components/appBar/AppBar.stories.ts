@@ -1,12 +1,12 @@
+import type { Meta, Story } from '@storybook/vue3'
 import AppBar from './appBar.vue'
 
 export default {
   component: AppBar,
   title: 'Components/AppBar',
-}
+} as Meta
 
-// @ts-expect-error because it's broken
-const Template = args => ({
+const Template: Story = args => ({
   components: { AppBar },
   setup() { return { args } },
   template: '<AppBar v-bind="args" logoHref="/"/>',
@@ -14,7 +14,6 @@ const Template = args => ({
 
 export const Default = Template.bind({})
 
-// @ts-expect-error because it's broken
 Default.args = {
   navigation: [
     { name: 'Documentation', href: 'http://docs.unlocked.to', size: 'small', type: 'text' },

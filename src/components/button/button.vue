@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useSlots } from 'vue'
+import { computed, ref, useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 interface Props {
@@ -25,15 +25,20 @@ const slots = useSlots()
 
 const styles = withTheme('button')
 
-const classes = [styles[props.size]]
-classes.push(styles.variants[props.type])
+const classes = computed(() => {
+  const array = [styles[props.size]]
+  array.push(styles.variants[props.type])
 
-if (props.disabled)
-  classes.push(styles.disabled)
+  if (props.disabled)
+    array.push(styles.disabled)
 
-if (props.class)
-  classes.push(props.class)
+  if (props.class)
+    array.push(props.class)
 
+  return array
+})
+
+const hover = ref(false)
 </script>
 
 <script lang="ts">
@@ -43,28 +48,32 @@ export default { name: 'Button' }
 <template>
   <!-- TODO: Find better way to do this -->
   <a
-    v-if="external"
+    v-if="props.href"
     :class="classes"
     :href="props.href"
     :target="props.target"
+    @mouseover="hover = true"
+    @mouseleave="hover = false"
     @click="e => emit('click', e)"
   >
     <div v-if="$slots.prefixIcon" class="mr-2">
-      <slot name="prefixIcon" />
+      <slot :hover="hover" name="prefixIcon" />
     </div>
-    <slot />
-    <div v-if="$slots.appendIcon" class="ml-2">
+
+    <slot :hover="hover" />
+
+    <div v-if="$slots.appendIcon" :hover="hover" class="ml-2">
       <slot name="appendIcon" />
     </div>
   </a>
 
   <button v-else :class="classes" :role="ariaRole" @click="e => emit('click', e)">
     <div v-if="$slots.prefixIcon" class="mr-2">
-      <slot name="prefixIcon" />
+      <slot :hover="hover" name="prefixIcon" />
     </div>
-    <slot />
+    <slot :hover="hover" />
     <div v-if="$slots.appendIcon" class="ml-2">
-      <slot name="appendIcon" />
+      <slot :hover="hover" name="appendIcon" />
     </div>
   </button>
 </template>

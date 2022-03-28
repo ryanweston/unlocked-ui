@@ -38,7 +38,6 @@ const path = slots.default
   ? slots.default()[0].children
   : props.path
 
-const noColor = !props.color && !props.fill && !props.stroke
 </script>
 
 <script lang="ts">
@@ -55,10 +54,7 @@ export default { name: 'Icon' }
   <svg
     v-else
     xmlns="http://www.w3.org/2000/svg"
-    :color="!noColor ? props.color : 'currentColor'"
-    :fill="!noColor ? (props.fill ? props.fill : 'currentColor') : classes.base"
-    :stroke="!noColor ? props.stroke : 'currentColor'"
-    :strokeWidth="{strokeWidth}"
+    :fill="props.fill ? props.fill : 'currentColor'"
     :className="classes"
     viewBox="0 0 24 24"
     :width="props.width ? props.width : sizes[props.size]"

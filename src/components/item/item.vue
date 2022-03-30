@@ -41,11 +41,11 @@ export default { name: 'Item' }
     :target="props.target"
     @click="e => emit('click', e)"
   >
-    <div v-if="$slots.prefixIcon" class="mr-3">
+    <div v-if="$slots.prefixIcon" class="mr-3 w-4 h-4">
       <slot name="prefixIcon" />
     </div>
     <slot />
-    <div v-if="$slots.appendIcon" class="ml-3">
+    <div v-if="$slots.appendIcon" class="ml-3 w-4 h-4">
       <slot name="appendIcon" />
     </div>
   </a>

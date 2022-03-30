@@ -3,21 +3,19 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { computed, ref } from 'vue'
 import { withTheme } from '@/theme'
 
-const open = ref(false)
-
-const activators = {
-  mouseover: (e: Event) => reveal(),
-  mouseleave: (e: Event) => reveal(),
-}
 interface Props {
   top: boolean
   left: boolean
   right: boolean
   bottom: boolean
+  hover: boolean
+  click: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   top: true,
+  hover: true,
+  click: false,
 })
 
 const classes = computed(() => {
@@ -38,6 +36,20 @@ const classes = computed(() => {
 
   return object
 })
+
+const open = ref(false)
+
+let activators: Record<string, (e: Event) => void> = {
+  mouseover: (e: Event) => reveal(),
+  mouseleave: (e: Event) => reveal(),
+}
+
+const clickEvent = {
+  click: (e: Event) => reveal(),
+}
+
+if (props.click)
+  activators = clickEvent
 
 function reveal(time?: number) {
   open.value = !open.value

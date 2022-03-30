@@ -12,5 +12,14 @@ export default {
       warning: 'text-textDark bg-warning border border-warning',
       error: 'text-textDark bg-error border border-error',
     },
+    buttonGroup: {
+      base: 'bg-greyBorder border border-greyBorder text-greyHeavy hover:bg-greyHeavy hover:border-greyHeavy hover:text-textDark',
+      active: 'bg-primary border-primary text-textDark',
+      order: {
+        first: 'rounded-l-lg rounded-r-none',
+        middle: 'rounded-none',
+        last: 'rounded-r-lg rounded-l-none',
+      },
+    },
   },
 }

@@ -11,10 +11,16 @@ interface Props {
   external: boolean
   href: string
   target: string
+  group: boolean
+  first: boolean
+  last: boolean
+  active: boolean
 }
 
 const emit = defineEmits(['click'])
 const props = withDefaults(defineProps<Props>(), {
+  group: false,
+  active: false,
   size: 'medium',
   disabled: false,
   type: 'default',
@@ -27,6 +33,24 @@ const styles = withTheme('button')
 
 const classes = computed(() => {
   const array = [styles[props.size]]
+
+  if (props.group) {
+    if (props.active)
+      array.push(styles.buttonGroup.active)
+    else
+      array.push(styles.buttonGroup.base)
+
+    if (props.first)
+      array.push(styles.buttonGroup.order.first)
+
+    if (props.last)
+      array.push(styles.buttonGroup.order.last)
+    else
+      array.push(styles.buttonGroup.order.middle)
+
+    return array
+  }
+
   array.push(styles.variants[props.type])
 
   if (props.disabled)
@@ -34,6 +58,8 @@ const classes = computed(() => {
 
   if (props.class)
     array.push(props.class)
+
+  // TODO: potentially abstract group button logic away
 
   return array
 })

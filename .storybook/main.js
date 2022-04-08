@@ -1,5 +1,5 @@
 const path = require('path')
-const { loadConfigFromFile, mergeConfig } = require("vite");
+const { mergeConfig } = require("vite");
 
 module.exports = {
   "stories": [
@@ -15,12 +15,11 @@ module.exports = {
     "builder": "storybook-builder-vite"
   },
   async viteFinal(config, { configType }) {
-    const { config: userConfig } = await loadConfigFromFile(
-      path.resolve(__dirname, "../vite.config.ts")
-    );
+    // const { config: userConfig } = await loadConfigFromFile(
+    //   path.resolve(__dirname, "../vite.config.ts")
+    // );
 
     return mergeConfig(config, {
-      ...userConfig,
       // manually specify plugins to avoid conflict
       plugins: [],
       resolve: {

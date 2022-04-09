@@ -98,7 +98,6 @@ export default { name: 'u-button' }
       <slot :hover="hover" name="prefixIcon" />
     </div>
     <slot :hover="hover" name="default" />
-    <slot :hover="hover" name="default" />
     <div v-if="$slots.appendIcon" class="ml-2">
       <slot :hover="hover" name="appendIcon" />
     </div>

@@ -1,8 +1,7 @@
 
-   
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-const path = require('path')
 
 export default defineConfig({
   alias: [
@@ -17,7 +16,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'Unlocked',
-      fileName: (format) => `Unlocked.${format}.js`,
+      fileName: format => `Unlocked.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

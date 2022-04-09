@@ -15,7 +15,7 @@ if (props.class)
 </script>
 
 <script lang="ts">
-export default { name: 'Body' }
+export default { name: 'u-body' }
 </script>
 
 <template>

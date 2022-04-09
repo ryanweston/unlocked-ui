@@ -2,7 +2,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 import { UButton } from '@/components/button'
-import { UItem } from '@/components/item'
+import { UDropdownItem } from '@/components/dropdown-item'
 import { UIcon } from '@/components/icon'
 import { withTheme } from '@/theme'
 
@@ -27,7 +27,7 @@ const classes: any = styles
 </script>
 
 <script lang="ts">
-export default { name: 'Dropdown' }
+export default { name: 'u-dropdown' }
 </script>
 
 <template>
@@ -55,7 +55,7 @@ export default { name: 'Dropdown' }
             <div v-for="item in items" :key="item.name">
               <MenuItem v-slot="{ active }" as="div" :disabled="item.disabled">
                 <slot :active="active" :item="item">
-                  <UItem
+                  <UDropdownItem
                     :href="item.href"
                     :disabled="item.disabled"
                     :active="active"
@@ -69,7 +69,7 @@ export default { name: 'Dropdown' }
                       </UIcon>
                     </template>
                     {{ item.name }}
-                  </UItem>
+                  </UDropdownItem>
                 </slot>
               </MenuItem>
             </div>

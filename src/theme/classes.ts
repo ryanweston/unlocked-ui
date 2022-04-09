@@ -1,4 +1,4 @@
-export * as appBarTheme from '@/components/appBar/classes'
+export * as appBarTheme from '@/components/menu/classes'
 export * as buttonTheme from '@/components/button/classes'
 export * as dropdownTheme from '@/components/dropdown/classes'
 export * as footerTheme from '@/components/footer/classes'
@@ -6,7 +6,7 @@ export * as footerTheme from '@/components/footer/classes'
 export * as tooltipTheme from '@/components/tooltip/classes'
 
 export * as iconTheme from '@/components/icon/classes'
-export * as itemTheme from '@/components/item/classes'
+export * as itemTheme from '@/components/dropdown-item/classes'
 
 // Typography
 export * as headlineTheme from '@/components/typography/headline/classes'

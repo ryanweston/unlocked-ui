@@ -59,7 +59,7 @@ function reveal(time?: number) {
 </script>
 
 <script lang="ts">
-export default { name: 'Tooltip' }
+export default { name: 'u-tooltip' }
 </script>
 
 <template>

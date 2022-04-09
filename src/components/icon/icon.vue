@@ -41,7 +41,7 @@ const path = slots.default
 </script>
 
 <script lang="ts">
-export default { name: 'Icon' }
+export default { name: 'u-icon' }
 </script>
 
 <template>

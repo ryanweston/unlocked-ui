@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import AppBar from './appBar.vue'
+import AppBar from './menu.vue'
 
 export default {
   component: AppBar,

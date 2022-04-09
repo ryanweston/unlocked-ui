@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const slots = useSlots()
 
-const styles = withTheme('item')
+const styles = withTheme('dropdownItem')
 
 const classes = [styles.base]
 
@@ -31,7 +31,7 @@ if (props.class)
 </script>
 
 <script lang="ts">
-export default { name: 'Item' }
+export default { name: 'u-dropdown-item' }
 </script>
 
 <template>

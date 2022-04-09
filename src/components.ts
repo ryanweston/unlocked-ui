@@ -1,11 +1,11 @@
-import { UAppBar } from './components/appBar'
+import { UMenu } from './components/menu'
 import { UButton } from './components/button'
 import { UDropdown } from './components/dropdown'
 import { UFooter } from './components/footer'
 import { UTooltip } from './components/tooltip'
 
 import { UIcon } from './components/icon'
-import { UItem } from './components/item'
+import { UDropdownItem } from './components/dropdown-item'
 
 // Typography
 import { UHeadline } from './components/typography/headline'
@@ -14,10 +14,10 @@ import { USubtitle } from './components/typography/subtitle'
 import { UBody } from './components/typography/body'
 
 export default [
-  UAppBar,
+  UMenu,
   UButton,
   UDropdown,
-  UItem,
+  UDropdownItem,
   UFooter,
   UTooltip,
   UIcon,

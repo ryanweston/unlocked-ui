@@ -68,7 +68,7 @@ const hover = ref(false)
 </script>
 
 <script lang="ts">
-export default { name: 'Button' }
+export default { name: 'u-button' }
 </script>
 
 <template>
@@ -97,7 +97,8 @@ export default { name: 'Button' }
     <div v-if="$slots.prefixIcon" class="mr-2">
       <slot :hover="hover" name="prefixIcon" />
     </div>
-    <slot :hover="hover" />
+    <slot :hover="hover" name="default" />
+    <slot :hover="hover" name="default" />
     <div v-if="$slots.appendIcon" class="ml-2">
       <slot :hover="hover" name="appendIcon" />
     </div>

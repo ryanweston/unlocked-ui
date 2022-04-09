@@ -1,11 +1,11 @@
-import appBar from '@/components/appBar/classes'
+import appBar from '@/components/menu/classes'
 import button from '@/components/button/classes'
 import dropdown from '@/components/dropdown/classes'
 import footer from '@/components/footer/classes'
 import tooltip from '@/components/tooltip/classes'
 
 import icon from '@/components/icon/classes'
-import item from '@/components/item/classes'
+import item from '@/components/dropdown-item/classes'
 
 // Typography
 import headline from '@/components/typography/headline/classes'

@@ -15,14 +15,13 @@ interface Items {
 interface Props {
   navigation: Array<Items>
   title: string
-  logo: boolean
-  logoUrl: string
+  logo: string
   logoHref: string
 }
 
 const props = defineProps<Props>()
 
-const styles = withTheme('appBar')
+const styles = withTheme('menu')
 const classes = styles
 
 // TODO: Improve functionality & modularise into individual components in order to help with
@@ -30,7 +29,7 @@ const classes = styles
 </script>
 
 <script lang="ts">
-export default { name: 'AppBar' }
+export default { name: 'u-menu' }
 </script>
 
 <template>
@@ -66,10 +65,10 @@ export default { name: 'AppBar' }
             <slot name="leftSide">
               <template v-if="logo">
                 <a :href="props.logoHref">
-                  <img :class="classes.logo.image" :src="props.logoUrl" alt="Workflow">
+                  <img :class="classes.logo.image" :src="props.logo" alt="Workflow">
                 </a>
                 <a :href="props.logoHref">
-                  <img :class="classes.logo.mobileImage" :src="props.logoUrl" alt="Workflow">
+                  <img :class="classes.logo.mobileImage" :src="props.logo" alt="Workflow">
                 </a>
               </template>
               <a v-else :href="props.logoHref">

@@ -1,5 +1,5 @@
 export default {
-  appBar: {
+  menu: {
     wrapper: 'bg-white border-b border-greyBorder',
     screenWrapper: 'max-w-7xl mx-auto px-2 sm:px-6 lg:px-8',
     screenContainer: 'relative flex items-center justify-between h-16 md:h-24',

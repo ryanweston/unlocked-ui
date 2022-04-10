@@ -1,15 +1,12 @@
 // THIS TAILWIND CONFIG IS ONLY TO WORK WITH STORYBOOK.
 
-import { formatTokens } from './src/utils/formatTokens'
-const tokens = require('./src/theme/tokens.js')
-
-const tailwindTokens = formatTokens(tokens)
+const tokens = require('./tokens')
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    tailwindTokens,
+    ...tokens,
     //  ...unlockedTailwind.theme,
     fontFamily: {
       sans: ['"Inter var"'],

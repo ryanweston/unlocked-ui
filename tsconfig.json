@@ -36,7 +36,8 @@
     "src/**/**/**/*.vue",
     "src/**/**/*.ts",
     "src/**/**/*.d.ts",
-    "src/**/**/*.js"
+    "src/**/**/*.js",
+    "tokens.js" 
   ],
   "exclude": [
     "node_modules"

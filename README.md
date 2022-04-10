@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://vuetifyjs.com" target="_blank">
+  <a href="https://unlocked.to" target="_blank">
     <img alt="Unlocked logo" width="100" src="https://unlocked.to/logo-dark.svg">
   </a>
 </p>

@@ -1,5 +1,6 @@
 import appBar from '@/components/menu/classes'
 import button from '@/components/button/classes'
+import link from '@/components/link/classes'
 import dropdown from '@/components/dropdown/classes'
 import footer from '@/components/footer/classes'
 import tooltip from '@/components/tooltip/classes'
@@ -16,6 +17,7 @@ import body from '@/components/typography/body/classes'
 export const defaultTheme = {
   ...appBar,
   ...button,
+  ...link,
   ...dropdown,
   ...item,
   ...footer,

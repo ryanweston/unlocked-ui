@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref, useSlots } from 'vue'
+import { computed, useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 interface Props {

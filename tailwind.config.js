@@ -9,6 +9,11 @@ module.exports = {
     fontFamily: {
       sans: ['"Inter var"'],
     },
+    extend: {
+      colors: {
+        transparent: 'transparent',
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

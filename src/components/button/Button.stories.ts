@@ -9,7 +9,7 @@ export default {
 const Template: Story = args => ({
   components: { Button },
   setup() { return { args } },
-  template: '<Button v-bind="args"> {{ args.defaultSlot }} </Button',
+  template: '<Button v-bind="args"> {{ args.defaultSlot }} </Button>',
 })
 
 export const Default = Template.bind({})

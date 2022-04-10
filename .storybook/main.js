@@ -2,25 +2,21 @@ const path = require('path')
 const { mergeConfig } = require("vite");
 
 module.exports = {
-  "stories": [
+  stories: [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-  "addons": [
+  staticDirs: ['../public'],
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ],
-  "framework": "@storybook/vue3",
-  "core": {
+  framework: "@storybook/vue3",
+  core: {
     "builder": "storybook-builder-vite"
   },
   async viteFinal(config, { configType }) {
-    // const { config: userConfig } = await loadConfigFromFile(
-    //   path.resolve(__dirname, "../vite.config.ts")
-    // );
-
     return mergeConfig(config, {
-      // manually specify plugins to avoid conflict
       plugins: [],
       resolve: {
         alias: [

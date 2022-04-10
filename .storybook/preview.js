@@ -15,6 +15,7 @@ import { app } from '@storybook/vue3';
 import { defaultTheme } from '../src/theme/defaultTheme'
 import { unlockedGlobal } from '../src'
 import './tailwind.css'
+import './inter.css'
 
 app.use(unlockedGlobal, { 
   theme: defaultTheme

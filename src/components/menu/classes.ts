@@ -1,6 +1,6 @@
 export default {
   menu: {
-    wrapper: 'bg-white border-b border-layoutBorder',
+    wrapper: 'bg-background border-b border-layoutBorder',
     screenWrapper: 'max-w-7xl mx-auto px-2 sm:px-6 lg:px-8',
     screenContainer: 'relative flex items-center justify-between h-16 md:h-24',
     screenMenuWrapper: 'hidden lg:block absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0',
@@ -8,7 +8,7 @@ export default {
     screenMenuItem: {
       base: 'px-3 py-2 rounded-md text-sm font-medium',
       default: 'text-text hover:bg-layoutContrast',
-      active: 'bg-black text-textContrast',
+      active: 'bg-primary text-textContrast',
     },
     mobileWrapper: 'sm:hidden',
     mobileContainer: 'px-2 pt-2 pb-3 space-y-1',

@@ -1,5 +1,5 @@
 export default {
   body: {
-    base: '', // abstract padding to a size object
+    base: 'text-text', // abstract padding to a size object
   },
 }

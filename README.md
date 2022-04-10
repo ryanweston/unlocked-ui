@@ -4,6 +4,24 @@
   </a>
 </p>
 
+
+
+<p align="center">
+  
+   <a href="https://app.netlify.com/sites/unlocked-storybook/deploys">
+    <img src="https://img.shields.io/npm/v/@unlocked/foundation">
+  </a>
+  
+  <a href="https://app.netlify.com/sites/unlocked-storybook/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/3bff2f88-9c28-4f9f-84de-a52a0d175fd8/deploy-status">
+  </a>
+  
+  <a href="#">
+    <img src="https://img.shields.io/npm/dm/@unlocked/foundation">
+  </a>
+  
+</p>
+
 # Unlocked UI
 
 Unlocked is a forward thinking, modern Tailwind based component library built for Vue. 

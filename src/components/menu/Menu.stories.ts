@@ -1,15 +1,15 @@
 import type { Meta, Story } from '@storybook/vue3'
-import AppBar from './menu.vue'
+import Menu from './menu.vue'
 
 export default {
-  component: AppBar,
-  title: 'Components/AppBar',
+  component: Menu,
+  title: 'Components/Menu',
 } as Meta
 
 const Template: Story = args => ({
-  components: { AppBar },
+  components: { Menu },
   setup() { return { args } },
-  template: '<AppBar v-bind="args" logoHref="/"/>',
+  template: '<Menu v-bind="args" logoHref="/"/>',
 })
 
 export const Default = Template.bind({})

@@ -3,16 +3,16 @@ import { useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 interface Props {
-  size: string
-  type: string
-  color: string
-  fill: string
-  stroke: string
-  width: string
-  height: string
-  strokeWidth: number
-  path: string
-  src: string
+  size?: string
+  type?: string
+  color?: string
+  fill?: string
+  stroke?: string
+  width?: string
+  height?: string
+  strokeWidth?: number
+  path?: string
+  src?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {

@@ -3,18 +3,18 @@ import { computed, useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 interface Props {
-  class: string
-  size: string
-  disabled: boolean
-  type: string
-  ariaRole: string
-  external: boolean
-  href: string
-  target: string
-  group: boolean
-  first: boolean
-  last: boolean
-  active: boolean
+  class?: string
+  size?: string
+  disabled?: boolean
+  type?: string
+  ariaRole?: string
+  external?: boolean
+  href?: string
+  target?: string
+  group?: boolean
+  first?: boolean
+  last?: boolean
+  active?: boolean
 }
 
 const emit = defineEmits(['click'])

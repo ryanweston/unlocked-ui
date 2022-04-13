@@ -3,12 +3,12 @@ import { computed, ref, useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 interface Props {
-  class: string
-  disabled: boolean
-  type: string
-  ariaRole: string
+  class?: string
+  disabled?: boolean
+  type?: string
+  ariaRole?: string
   href: string
-  target: string
+  target?: string
 }
 
 const emit = defineEmits(['click'])

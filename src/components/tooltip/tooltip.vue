@@ -4,12 +4,12 @@ import { computed, ref } from 'vue'
 import { withTheme } from '@/theme'
 
 interface Props {
-  top: boolean
-  left: boolean
-  right: boolean
-  bottom: boolean
-  hover: boolean
-  click: boolean
+  top?: boolean
+  left?: boolean
+  right?: boolean
+  bottom?: boolean
+  hover?: boolean
+  click?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -22,17 +22,25 @@ const classes = computed(() => {
   const styles = withTheme('tooltip')
   const object = { ...styles }
 
-  if (props.bottom)
+  if (props.bottom) {
     object.position = 'top-full mt-2'
+    return object
+  }
 
-  if (props.top)
-    object.position = 'bottom-full mb-2'
-
-  if (props.left)
+  if (props.left) {
     object.position = 'right-full mr-2'
+    return object
+  }
 
-  if (props.right)
+  if (props.right) {
     object.position = 'left-full ml-2'
+    return object
+  }
+
+  if (props.top) {
+    object.position = 'bottom-full mb-2'
+    return object
+  }
 
   return object
 })

@@ -2,7 +2,7 @@
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
 interface Props {
-  class: string
+  class?: string
 }
 
 const props = defineProps<Props>()

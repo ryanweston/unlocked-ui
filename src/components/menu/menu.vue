@@ -7,16 +7,16 @@ import { withTheme } from '@/theme'
 
 interface Items {
   name: string
-  href: string
+  href?: string
   size: string
   type: string
 }
 
 interface Props {
-  navigation: Array<Items>
-  title: string
-  logo: string
-  logoHref: string
+  navigation?: Array<Items>
+  title?: string
+  logo?: string
+  logoHref?: string
 }
 
 const props = defineProps<Props>()

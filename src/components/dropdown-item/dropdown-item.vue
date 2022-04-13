@@ -4,7 +4,7 @@ import { withTheme } from '@/theme'
 
 interface Props {
   active: boolean
-  class: string
+  class?: string
   disabled: boolean
   type: string
   href: string

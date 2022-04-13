@@ -9,13 +9,13 @@ import { withTheme } from '@/theme'
 interface Item {
   name: string
   href: string
-  icon: string
-  iconSrc: string
+  icon?: string
+  iconSrc?: string
   disabled: boolean
 }
 
 interface Props {
-  text: string
+  text?: string
   items: Array<Item>
 }
 

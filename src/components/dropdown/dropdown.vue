@@ -32,21 +32,19 @@ export default { name: 'u-dropdown' }
 
 <template>
   <Menu v-slot="{ open }" as="div" :class="classes.wrapper">
-    <div>
-      <MenuButton>
-        <slot name="activator">
-          <UButton
-            type="text"
-            size="small"
-          >
-            {{ text }}
-            <template #appendIcon>
-              <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
-            </template>
-          </UButton>
-        </slot>
-      </MenuButton>
-    </div>
+    <MenuButton>
+      <slot name="activator">
+        <UButton
+          type="text"
+          size="small"
+        >
+          {{ text }}
+          <template #appendIcon>
+            <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
+          </template>
+        </UButton>
+      </slot>
+    </MenuButton>
 
     <div v-show="open">
       <transition :enter-active-class="classes.transition.enterActiveClass" :enter-from-class="classes.transition.enterFromClass" :enter-to-class="classes.transition.enterToClass" :leave-active-class="classes.transition.leaveActiveClass" :leave-from-class="classes.transition.leaveFromClass" :leave-to-class="classes.transition.leaveToClass">

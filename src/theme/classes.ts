@@ -1,4 +1,4 @@
-export * as appBarTheme from '@/components/menu/classes'
+export * as menuTheme from '@/components/menu/classes'
 export * as buttonTheme from '@/components/button/classes'
 export * as linkTheme from '@/components/link/classes'
 export * as dropdownTheme from '@/components/dropdown/classes'

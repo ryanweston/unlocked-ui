@@ -2,6 +2,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { UButton } from '@/components/button'
+import { UMenuItem } from '@/components/menu-item'
 
 import { withTheme } from '@/theme'
 
@@ -10,6 +11,7 @@ interface Items {
   href?: string
   size: string
   type: string
+  items: Array<Items>
 }
 
 interface Props {
@@ -44,7 +46,7 @@ export default { name: 'u-menu' }
         <slot name="mobileMenuButton">
           <div :class="classes.menuButton.container">
             <DisclosureButton :class="classes.menuButton.button">
-              <span class="sr-only">Open main menu</span>
+              <span class="sr-only">Open menu</span>
               <MenuIcon
                 v-if="!open"
                 :class="classes.menuButton.icon"
@@ -103,15 +105,15 @@ export default { name: 'u-menu' }
     <DisclosurePanel :class="classes.mobileWrapper">
       <div :class="classes.mobileContainer">
         <slot name="mobileMenu">
-          <DisclosureButton
+          <UMenuItem
             v-for="item in navigation"
             :key="item.name"
-            as="a"
+            :items="item.items"
+            :type="item.type"
             :href="item.href"
-            :class="[classes.mobileMenuItem.default, classes.mobileMenuItem.base]"
           >
             {{ item.name }}
-          </DisclosureButton>
+          </UMenuItem>
         </slot>
       </div>
     </DisclosurePanel>

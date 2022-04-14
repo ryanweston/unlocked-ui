@@ -1,4 +1,5 @@
 import { UMenu } from './components/menu'
+import { UMenuItem } from './components/menu-item'
 import { UButton } from './components/button'
 import { ULink } from './components/link'
 import { UDropdown } from './components/dropdown'
@@ -16,6 +17,7 @@ import { UBody } from './components/typography/body'
 
 export default [
   UMenu,
+  UMenuItem,
   UButton,
   ULink,
   UDropdown,

@@ -3,12 +3,12 @@ import { useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 interface Props {
-  active: boolean
+  active?: boolean
   class?: string
-  disabled: boolean
-  type: string
-  href: string
-  target: string
+  disabled?: boolean
+  type?: string
+  href?: string
+  target?: string
 }
 
 const emit = defineEmits(['click'])
@@ -36,7 +36,7 @@ export default { name: 'u-dropdown-item' }
 
 <template>
   <a
-    :class="[classes, active ? styles.hover : '']"
+    :class="[classes]"
     :href="props.href"
     :target="props.target"
     @click="e => emit('click', e)"

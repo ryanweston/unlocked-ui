@@ -9,9 +9,9 @@ export default {
 
 const code = (args: any) => {
   if (args.group === true)
-    return '<Button v-bind="args" first :active="activeRef" @click="() => {changeStatus(true)}"> {{ args.defaultSlot }} </Button><Button v-bind="args" last :active="!activeRef" @click="() => {changeStatus(false)}"> {{ args.defaultSlot }} </Button>'
+    return '<Button v-bind="args" first :active="activeRef" @click="() => {changeStatus(true)}"> {{ args.default }} </Button><Button v-bind="args" last :active="!activeRef" @click="() => {changeStatus(false)}"> {{ args.default }} </Button>'
   else
-    return '<Button v-bind="args"> {{ args.defaultSlot }} </Button>'
+    return '<Button v-bind="args"> {{ args.default }} </Button>'
 }
 
 const Template: Story = args => ({
@@ -35,35 +35,35 @@ export const Error = Template.bind({})
 export const Group = Template.bind({})
 
 Default.args = {
-  defaultSlot: 'Default',
+  default: 'Default',
 }
 
 Secondary.args = {
   type: 'secondary',
-  defaultSlot: 'Secondary',
+  default: 'Secondary',
 }
 
 Alternate.args = {
   type: 'alternate',
-  defaultSlot: 'Alternate',
+  default: 'Alternate',
 }
 
 Text.args = {
   type: 'text',
-  defaultSlot: 'Text',
+  default: 'Text',
 }
 
 Warning.args = {
   type: 'warning',
-  defaultSlot: 'Warning',
+  default: 'Warning',
 }
 
 Error.args = {
   type: 'error',
-  defaultSlot: 'Error',
+  default: 'Error',
 }
 
 Group.args = {
   group: true,
-  defaultSlot: 'Group',
+  default: 'Group',
 }

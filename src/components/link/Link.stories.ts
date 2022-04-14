@@ -11,12 +11,12 @@ const Template: Story = args => ({
   setup() { return { args } },
   template: `<Link 
     v-bind="args"
-  > {{ args.defaultSlot }} </Link>`,
+  > {{ args.default }} </Link>`,
 })
 
 export const Default = Template.bind({})
 
 Default.args = {
   href: '#',
-  defaultSlot: 'Back to homepage',
+  default: 'Back to homepage',
 }

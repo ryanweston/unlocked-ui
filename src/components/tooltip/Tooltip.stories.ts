@@ -5,6 +5,9 @@ import Tooltip from './tooltip.vue'
 export default {
   component: Tooltip,
   title: 'Components/Tooltip',
+  args: {
+    hover: true,
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -15,9 +18,9 @@ const Template: Story = args => ({
       v-bind="args"
     > 
       <template #activator={on}>
-        <Button v-on="on">Wow</Button>
+        <Button v-on="on">Button</Button>
       </template>
-      {{ args.defaultSlot }}
+      {{ args.default }}
     </Tooltip>
   `,
 })
@@ -26,5 +29,5 @@ export const Default = Template.bind({})
 
 Default.args = {
   bottom: true,
-  defaultSlot: 'Back to homepage',
+  default: 'Back to homepage',
 }

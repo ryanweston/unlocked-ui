@@ -19,7 +19,16 @@ Default.args = {
     { name: 'Documentation', href: 'http://docs.unlocked.to', size: 'small', type: 'text' },
     { name: 'Our mission', href: '#', size: 'small', type: 'text', disabled: true },
     { name: 'Roadmap', href: 'https://github.com/orgs/UnlockedUI/projects/1', size: 'small', type: 'text' },
-    { name: 'Products', href: 'https://github.com/orgs/UnlockedUI', size: 'small', type: 'text' },
+    {
+      name: 'Products',
+      href: 'https://github.com/orgs/UnlockedUI',
+      size: 'small',
+      type: 'text',
+      items: [
+        { name: 'Documentation', href: 'http://docs.unlocked.to', size: 'small', type: 'text' },
+        { name: 'Our mission', href: '#', size: 'small', type: 'text', disabled: true },
+      ],
+    },
     { name: 'Coming soon', href: '#', size: 'small', type: 'default', disabled: true },
   ],
   title: 'Unlocked',

@@ -9,11 +9,11 @@ export default {
 const Template: Story = args => ({
   components: { Title },
   setup() { return { args } },
-  template: '<Title v-bind="args"> {{ args.defaultSlot }} </Title>',
+  template: '<Title v-bind="args"> {{ args.default }} </Title>',
 })
 
 export const Default = Template.bind({})
 
 Default.args = {
-  defaultSlot: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 }

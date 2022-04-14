@@ -2,15 +2,14 @@
 import { useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
+type Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+
 interface Props {
-  size?: string
+  size?: Sizes
   type?: string
   color?: string
-  fill?: string
-  stroke?: string
   width?: string
   height?: string
-  strokeWidth?: number
   path?: string
   src?: string
 }
@@ -24,6 +23,7 @@ const sizes: any = {
   sm: 18,
   md: 20,
   lg: 24,
+  xl: 26,
 }
 
 const styles = withTheme('icon')
@@ -54,7 +54,7 @@ export default { name: 'u-icon' }
   <svg
     v-else
     xmlns="http://www.w3.org/2000/svg"
-    :fill="props.fill ? props.fill : 'currentColor'"
+    :fill="props.color ? props.color : 'currentColor'"
     :className="classes"
     viewBox="0 0 24 24"
     :width="props.width ? props.width : sizes[props.size]"

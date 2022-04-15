@@ -11,7 +11,7 @@ export default {
       active: 'bg-primary text-textContrast',
     },
     mobileWrapper: 'md:hidden',
-    mobileContainer: 'px-2 pt-2 pb-3 space-y-1 flex-col flex',
+    mobileContainer: 'px-2 pt-2 pb-3 space-y-2 flex-col flex',
     mobileMenuItem: {
       base: 'block px-3 py-2 rounded-md text-base font-medium',
       default: 'text-text hover:bg-layoutHover',

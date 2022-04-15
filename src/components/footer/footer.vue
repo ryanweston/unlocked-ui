@@ -3,6 +3,7 @@ import { withTheme } from '@/theme'
 
 interface Props {
   class?: string
+  absolute?: boolean
 }
 
 const props = defineProps<Props>()
@@ -16,7 +17,7 @@ export default { name: 'u-footer' }
 </script>
 
 <template>
-  <div :class="classes.wrapper">
+  <div :class="[classes.wrapper, props.absolute ? classes.absolute : '']">
     <div :class="classes.container">
       <slot />
     </div>

@@ -2,6 +2,7 @@
 import { ref, useSlots } from 'vue'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 import { UButton } from '@/components/button'
+import { UIcon } from '@/components/icon'
 import { withTheme } from '@/theme'
 
 interface Props {
@@ -47,7 +48,7 @@ export default { name: 'u-menu-item' }
     :class="[classes]"
     :target="props.target"
     :disabled="props.disabled"
-    type="text"
+    :type="props.type"
     @click="(e: Event) => { toggleDropdown(); emit('click', e)}"
   >
     <div v-if="$slots.prefixIcon" class="mr-3 w-4 h-4">
@@ -61,15 +62,19 @@ export default { name: 'u-menu-item' }
     </div>
   </UButton>
   <template v-if="items && dropdownVisible">
-    <a
+    <UButton
       v-for="item in items"
       :key="item.name"
       :class="[classes, 'ml-4']"
       :href="item.href"
       :target="item.target"
-      :disabled="items.disabled"
+      :disabled="item.disabled"
+      type="text"
     >
+      <template v-if="item.iconSrc" #prefixIcon>
+        <UIcon :src="item.iconSrc" />
+      </template>
       {{ item.name }}
-    </a>
+    </UButton>
   </template>
 </template>

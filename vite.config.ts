@@ -27,7 +27,6 @@ export default defineConfig({
         dir: 'dist/esm',
         minifyInternalExports: true,
         preserveModules: true,
-        preserveModulesRoot: 'src',
         exports: 'named',
         entryFileNames: '[name].js',
       },

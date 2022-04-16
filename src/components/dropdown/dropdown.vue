@@ -6,7 +6,7 @@ import { UDropdownItem } from '@/components/dropdown-item'
 import { UIcon } from '@/components/icon'
 import { withTheme } from '@/theme'
 
-interface Item {
+export interface Item {
   name: string
   href: string
   icon?: string
@@ -14,12 +14,12 @@ interface Item {
   disabled: boolean
 }
 
-interface Props {
+export interface DropdownProps {
   text?: string
   items: Array<Item>
 }
 
-const props = defineProps<Props>()
+const props = defineProps<DropdownProps>()
 
 const styles = withTheme('dropdown')
 

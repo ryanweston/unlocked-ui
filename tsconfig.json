@@ -32,8 +32,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "tokens.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/tokens.js", "global-components.d.ts"],
   "exclude": [
+    "dist",
     "node_modules"
   ]
 }

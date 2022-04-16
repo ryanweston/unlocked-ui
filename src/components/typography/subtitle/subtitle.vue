@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface SubtitleProps {
   class?: string
 }
 
-const props = defineProps<Props>()
+const props = defineProps<SubtitleProps>()
 
 const styles = withTheme('subtitle')
 const classes = [styles.base]

@@ -2,7 +2,7 @@
 import { computed, useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface ButtonProps {
   class?: string
   size?: string
   disabled?: boolean
@@ -21,7 +21,7 @@ const emit = defineEmits(['click'])
 
 // TODO: Handle reusable props such as type & size as individual props to
 // improve developer experience
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<ButtonProps>(), {
   group: false,
   active: false,
   size: 'medium',

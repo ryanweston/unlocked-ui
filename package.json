@@ -1,6 +1,6 @@
 {
   "name": "@unlocked/foundation",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "description": "",
   "main": "./dist/umd/index.js",
   "module": "./dist/esm/index.js",
@@ -9,8 +9,10 @@
     "src",
     "tokens.js"
   ],
+  "type": "module",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly && mv ./dist/esm/src/* ./dist/esm/ && rmdir ./dist/esm/src",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
     "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -28,7 +30,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "^3.2.21"
+    "vue": "^3.2.33"
   },
   "sideEffects": false,
   "devDependencies": {
@@ -59,6 +61,6 @@
     "typescript": "^4.5.5",
     "vite": "^2.7.13",
     "vue-loader": "^16.8.3",
-    "vue-tsc": "^0.31.2"
+    "vue-tsc": "^0.34.6"
   }
 }

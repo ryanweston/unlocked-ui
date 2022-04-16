@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface TitleProps {
   class?: string
 }
 
-const props = defineProps<Props>()
+const props = defineProps<TitleProps>()
 
 const styles = withTheme('title')
 const classes = [styles.base]

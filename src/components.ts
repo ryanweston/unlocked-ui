@@ -1,3 +1,4 @@
+import type { Plugin } from 'vue'
 import { UMenu } from './components/menu'
 import { UMenuItem } from './components/menu-item'
 import { UButton } from './components/button'
@@ -29,4 +30,4 @@ export default [
   UTitle,
   USubtitle,
   UBody,
-]
+] as Plugin[]

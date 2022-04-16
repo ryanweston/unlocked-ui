@@ -2,9 +2,9 @@
 import { useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
-type Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
-interface Props {
+export interface IconProps {
   size?: Sizes
   type?: string
   color?: string
@@ -14,7 +14,7 @@ interface Props {
   src?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<IconProps>(), {
   size: 'md',
 })
 

@@ -5,7 +5,7 @@ import { UButton } from '@/components/button'
 import { UIcon } from '@/components/icon'
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface MenuItemProps {
   class?: string
   disabled?: boolean
   type?: string
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const emit = defineEmits(['click'])
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<MenuItemProps>(), {
   disabled: false,
 })
 

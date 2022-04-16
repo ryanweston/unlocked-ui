@@ -1,9 +1,11 @@
-import type { App } from 'vue'
+import type { App, Plugin } from 'vue'
 import components from '@/components'
 
-const createGlobalPlugin = (components: any) => {
-  const install = async(app: App, options: any) => {
-    components.forEach((c: any) => app.use(c))
+const createGlobalPlugin = (components: Plugin[] = []) => {
+  const install = (app: App, options: any) => {
+    components.forEach((c) => {
+      app.use(c)
+    })
     app.provide('themeConfig', options.theme)
   }
   return { install }

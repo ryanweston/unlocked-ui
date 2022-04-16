@@ -2,7 +2,7 @@
 import { computed, ref, useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface LinkProps {
   class?: string
   disabled?: boolean
   type?: string
@@ -15,7 +15,7 @@ const emit = defineEmits(['click'])
 
 // TODO: Handle reusable props such as type & size as individual props to
 // improve developer experience
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<LinkProps>(), {
   disabled: false,
   type: 'default',
   target: '_blank',

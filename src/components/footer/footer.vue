@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface FooterProps {
   class?: string
   absolute?: boolean
 }
 
-const props = defineProps<Props>()
+const props = defineProps<FooterProps>()
 
 const styles = withTheme('footer')
 const classes = styles

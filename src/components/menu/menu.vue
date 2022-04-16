@@ -6,7 +6,7 @@ import { UMenuItem } from '@/components/menu-item'
 
 import { withTheme } from '@/theme'
 
-interface Items {
+export interface Items {
   name: string
   href?: string
   size: string
@@ -14,14 +14,14 @@ interface Items {
   items: Array<Items>
 }
 
-interface Props {
+export interface MenuProps {
   navigation?: Array<Items>
   title?: string
   logo?: string
   logoHref?: string
 }
 
-const props = defineProps<Props>()
+const props = defineProps<MenuProps>()
 
 const styles = withTheme('menu')
 const classes = styles

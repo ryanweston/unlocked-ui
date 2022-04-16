@@ -1,11 +1,12 @@
 
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
-interface Props {
+
+export interface HeadlineProps {
   class?: string
 }
 
-const props = defineProps<Props>()
+const props = defineProps<HeadlineProps>()
 
 const styles = withTheme('headline')
 const classes = [styles.base]

@@ -3,7 +3,7 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { computed, ref } from 'vue'
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface TooltipProps {
   top?: boolean
   left?: boolean
   right?: boolean
@@ -12,7 +12,7 @@ interface Props {
   click?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<TooltipProps>(), {
   top: true,
   hover: true,
   click: false,

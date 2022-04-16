@@ -2,7 +2,7 @@
 import { useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
-interface Props {
+export interface DropdownItemProps {
   active?: boolean
   class?: string
   disabled?: boolean
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const emit = defineEmits(['click'])
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<DropdownItemProps>(), {
   disabled: false,
 })
 

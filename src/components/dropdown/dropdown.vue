@@ -8,10 +8,13 @@ import { withTheme } from '@/theme'
 
 export interface Item {
   name: string
-  href: string
-  icon?: string
+  active?: boolean
+  class?: string
+  disabled?: boolean
+  type?: string
+  href?: string
+  target?: string
   iconSrc?: string
-  disabled: boolean
 }
 
 export interface DropdownProps {

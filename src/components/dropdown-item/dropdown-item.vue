@@ -3,6 +3,7 @@ import { useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 export interface DropdownItemProps {
+  name: string
   active?: boolean
   class?: string
   disabled?: boolean
@@ -44,7 +45,9 @@ export default { name: 'u-dropdown-item' }
     <div v-if="$slots.prefixIcon" class="mr-3 w-4 h-4">
       <slot name="prefixIcon" />
     </div>
-    <slot />
+    <slot>
+      {{ props.name }}
+    </slot>
     <div v-if="$slots.appendIcon" class="ml-3 w-4 h-4">
       <slot name="appendIcon" />
     </div>

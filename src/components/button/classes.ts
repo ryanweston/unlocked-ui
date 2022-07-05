@@ -8,7 +8,7 @@ export default {
       default: 'text-textContrast bg-primary border border-primary hover:bg-transparent hover:text-text',
       secondary: 'border-solid border border-primary bg-transparent text-primary hover:text-textContrast hover:bg-primary',
       alternate: 'border-solid border border-layoutHeavyContrast bg-transparent text-layoutHeavyContrast hover:text-text hover:border-primary',
-      text: 'hover:bg-layoutHover',
+      text: 'text-text hover:bg-layoutHover hover:text-textContrast',
       warning: 'text-textContrast bg-warning border border-warning',
       error: 'text-textContrast bg-error border border-error',
     },

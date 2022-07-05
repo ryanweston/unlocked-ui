@@ -6,12 +6,16 @@ import { UMenuItem } from '@/components/menu-item'
 
 import { withTheme } from '@/theme'
 
+// Use Button types here to avoid repitition
 export interface Items {
-  name: string
+  text: string
   href?: string
-  size: string
-  type: string
-  items: Array<Items>
+  size?: string
+  type?: string
+  iconSrc?: string
+  disabled?: boolean
+  external?: boolean
+  items?: Array<Items>
 }
 
 export interface MenuProps {
@@ -88,11 +92,11 @@ export default { name: 'u-menu' }
             <slot name="rightSide">
               <UButton
                 v-for="item in navigation"
-                :key="item.name"
+                :key="item.text"
                 :size="item.size"
                 :type="item.type"
               >
-                {{ item.name }}
+                {{ item.text }}
               </UButton>
             </slot>
           </div>
@@ -107,12 +111,12 @@ export default { name: 'u-menu' }
         <slot name="mobileMenu">
           <UMenuItem
             v-for="item in navigation"
-            :key="item.name"
+            :key="item.text"
             :items="item.items"
             :type="item.type"
             :href="item.href"
           >
-            {{ item.name }}
+            {{ item.text }}
           </UMenuItem>
         </slot>
       </div>

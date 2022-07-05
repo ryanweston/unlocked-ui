@@ -30,8 +30,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   ariaRole: 'button',
 })
 
-const slots = useSlots()
-
 const styles = withTheme('button')
 
 const classes = computed(() => {
@@ -75,7 +73,7 @@ export default { name: 'u-button' }
 <template>
   <!-- TODO: Find better way to do this, potentiall composable tag render function -->
   <a
-    v-if="props.href"
+    v-if="props.external"
     :class="classes"
     :href="props.href"
     :target="props.target"

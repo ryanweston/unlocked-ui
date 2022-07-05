@@ -7,7 +7,7 @@ import { UIcon } from '@/components/icon'
 import { withTheme } from '@/theme'
 
 export interface Item {
-  name: string
+  text: string
   active?: boolean
   class?: string
   disabled?: boolean
@@ -53,7 +53,7 @@ export default { name: 'u-dropdown' }
       <transition :enter-active-class="classes.transition.enterActiveClass" :enter-from-class="classes.transition.enterFromClass" :enter-to-class="classes.transition.enterToClass" :leave-active-class="classes.transition.leaveActiveClass" :leave-from-class="classes.transition.leaveFromClass" :leave-to-class="classes.transition.leaveToClass">
         <slot name="menu">
           <MenuItems :class="classes.menu">
-            <div v-for="item in items" :key="item.name">
+            <div v-for="item in items" :key="item.text">
               <MenuItem v-slot="{ active }" as="div" :disabled="item.disabled">
                 <slot :active="active" :item="item">
                   <UDropdownItem
@@ -69,7 +69,7 @@ export default { name: 'u-dropdown' }
                         {{ item.icon }}
                       </UIcon>
                     </template>
-                    {{ item.name }}
+                    {{ item.text }}
                   </UDropdownItem>
                 </slot>
               </MenuItem>

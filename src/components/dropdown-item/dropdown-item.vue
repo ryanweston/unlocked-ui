@@ -3,7 +3,7 @@ import { useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
 export interface DropdownItemProps {
-  name: string
+  text: string
   active?: boolean
   class?: string
   disabled?: boolean
@@ -16,8 +16,6 @@ const emit = defineEmits(['click'])
 const props = withDefaults(defineProps<DropdownItemProps>(), {
   disabled: false,
 })
-
-const slots = useSlots()
 
 const styles = withTheme('dropdownItem')
 
@@ -46,7 +44,7 @@ export default { name: 'u-dropdown-item' }
       <slot name="prefixIcon" />
     </div>
     <slot>
-      {{ props.name }}
+      {{ props.text }}
     </slot>
     <div v-if="$slots.appendIcon" class="ml-3 w-4 h-4">
       <slot name="appendIcon" />

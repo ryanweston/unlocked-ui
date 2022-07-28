@@ -1,6 +1,6 @@
 {
   "name": "@unlocked/foundation",
-  "version": "0.9.92-beta.2",
+  "version": "0.9.92-beta.3",
   "description": "",
   "module": "./dist/esm/index.js",
   "files": [
@@ -28,7 +28,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "sideEffects": false,
   "dependencies": {
     "@headlessui/vue": "^1.0.0",
     "@heroicons/vue": "^1.0.6",

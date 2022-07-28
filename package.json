@@ -1,6 +1,6 @@
 {
   "name": "@unlocked/foundation",
-  "version": "0.9.92-beta.1",
+  "version": "0.9.92-beta.2",
   "description": "",
   "module": "./dist/esm/index.js",
   "files": [

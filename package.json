@@ -28,16 +28,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "sideEffects": false,
+  "dependencies": {
+    "@heroicons/vue": "^1.0.6",
+    "@mdi/js": "^6.6.95",
+    "@headlessui/vue": "^1.0.0"
+  },
   "peerDependencies": {
     "vue": "^3.2.33"
   },
-  "sideEffects": false,
   "devDependencies": {
     "@antfu/eslint-config": "^0.16.1",
     "@babel/core": "^7.17.2",
-    "@headlessui/vue": "^1.0.0",
-    "@heroicons/vue": "^1.0.6",
-    "@mdi/js": "^6.6.95",
     "@storybook/addon-actions": "^6.5.0-alpha.39",
     "@storybook/addon-essentials": "^6.5.0-alpha.39",
     "@storybook/addon-links": "^6.5.0-alpha.39",
@@ -63,8 +65,5 @@
     "vue": "^3.2.33",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^0.34.6"
-  },
-  "dependencies": {
-    "@emdgroup-liquid/liquid": "^2.3.1"
   }
 }

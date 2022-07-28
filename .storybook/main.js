@@ -14,7 +14,7 @@ module.exports = {
   core: {
     "builder": "storybook-builder-vite"
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     return mergeConfig(config, {
       plugins: [],
       resolve: {

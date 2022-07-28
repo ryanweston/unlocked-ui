@@ -12,6 +12,8 @@ export interface DropdownItemProps {
   target?: string
 }
 
+const slots = useSlots()
+
 const emit = defineEmits(['click'])
 const props = withDefaults(defineProps<DropdownItemProps>(), {
   disabled: false,

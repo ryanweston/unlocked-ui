@@ -80,7 +80,7 @@ export default { name: 'u-tooltip' }
 
     <PopoverPanel v-if="open" static :class="['absolute z-10', classes.position]">
       <slot name="tooltip">
-        <div class="px-4 py-2 bg-primary text-textContrast rounded-full text-sm">
+        <div class="px-4 py-2 bg-primary text-${tokens.textContrast} rounded-full text-sm">
           <slot />
         </div>
       </slot>

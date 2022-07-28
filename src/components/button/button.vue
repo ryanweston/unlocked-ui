@@ -8,7 +8,6 @@ export interface ButtonProps {
   disabled?: boolean
   type?: string
   ariaRole?: string
-  external?: boolean
   href?: string
   target?: string
   group?: boolean
@@ -17,7 +16,7 @@ export interface ButtonProps {
   active?: boolean
 }
 
-const emit = defineEmits(['click'])
+const emit = defineEmits(['click', 'mouseover', 'mouseleave'])
 
 // TODO: Handle reusable props such as type & size as individual props to
 // improve developer experience
@@ -29,6 +28,8 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   type: 'default',
   ariaRole: 'button',
 })
+
+const slots = useSlots()
 
 const styles = withTheme('button')
 
@@ -71,9 +72,8 @@ export default { name: 'u-button' }
 </script>
 
 <template>
-  <!-- TODO: Find better way to do this, potentiall composable tag render function -->
   <a
-    v-if="props.external"
+    v-if="props.href"
     :class="classes"
     :href="props.href"
     :target="props.target"
@@ -90,7 +90,12 @@ export default { name: 'u-button' }
     </div>
   </a>
 
-  <button v-else :class="classes" :role="ariaRole" @click="e => emit('click', e)">
+  <button
+    v-else
+    :class="classes"
+    :role="ariaRole"
+    @click="e => emit('click', e)"
+  >
     <div v-if="$slots.prefixIcon" class="mr-2">
       <slot name="prefixIcon" />
     </div>

@@ -2,7 +2,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { UButton } from '@/components/button'
-import { UMenuItem } from '@/components/menu-item'
 
 import { withTheme } from '@/theme'
 
@@ -29,9 +28,6 @@ const props = defineProps<MenuProps>()
 
 const styles = withTheme('menu')
 const classes = styles
-
-// TODO: Improve functionality & modularise into individual components in order to help with
-// slots and customisation of the app bar.
 </script>
 
 <script lang="ts">
@@ -109,15 +105,14 @@ export default { name: 'u-menu' }
     <DisclosurePanel :class="classes.mobileWrapper">
       <div :class="classes.mobileContainer">
         <slot name="mobileMenu">
-          <UMenuItem
+          <UButton
             v-for="item in navigation"
             :key="item.text"
-            :items="item.items"
+            :size="item.size"
             :type="item.type"
-            :href="item.href"
           >
             {{ item.text }}
-          </UMenuItem>
+          </UButton>
         </slot>
       </div>
     </DisclosurePanel>

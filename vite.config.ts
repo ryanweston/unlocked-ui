@@ -31,15 +31,7 @@ export default defineConfig({
         exports: 'named',
         entryFileNames: '[name].js',
       },
-      {
-        format: 'umd',
-        // Provide global variables to use in the UMD build
-        // for externalized deps
-        dir: 'dist/umd',
-        globals: {
-          vue: 'Vue',
-        },
-      }],
+      ],
     },
   },
 })

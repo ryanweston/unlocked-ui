@@ -1,5 +1,11 @@
-export default {
-  title: {
-    base: 'text-4xl font-bold text-text', // abstract padding to a size object
-  },
+import type { UTokens } from '@/types'
+
+const title = (tokens: UTokens) => {
+  return {
+    title: {
+      base: `text-4xl font-bold text-${tokens.text}`, // abstract padding to a size object
+    },
+  }
 }
+
+export default title

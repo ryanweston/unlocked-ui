@@ -3,8 +3,13 @@
 export * from './components/index'
 
 // Theme & classes
+export * from './theme'
 export * from './theme/classes'
+export * from './theme/theme'
 export * from './theme/defaultTheme'
+
+// Export types
+export * from './types'
 
 // Installers
 export * from './utils/modular-install'

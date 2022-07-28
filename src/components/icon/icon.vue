@@ -50,7 +50,6 @@ export default { name: 'u-icon' }
     :src="props.src"
     class="w-auto h-full"
   >
-
   <svg
     v-else
     xmlns="http://www.w3.org/2000/svg"

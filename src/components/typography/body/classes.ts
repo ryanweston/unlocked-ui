@@ -1,5 +1,11 @@
-export default {
-  body: {
-    base: 'text-text', // abstract padding to a size object
-  },
+import type { UTokens } from '@/types'
+
+const body = (tokens: UTokens) => {
+  return {
+    body: {
+      base: `text-${tokens.text}`,
+    },
+  }
 }
+
+export default body

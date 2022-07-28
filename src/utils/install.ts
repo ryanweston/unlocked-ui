@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import type { SFCWithInstall } from './typescript'
+import type { SFCWithInstall } from '@/types'
 
 export const installComponent = <T, E extends Record<string, any>>(main: T, extra?: E) => {
   (main as SFCWithInstall<T>).install = (app: App): void => {

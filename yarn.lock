@@ -1198,14 +1198,6 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz#d5e0706cf8c6acd8c6032f8d54070af261bbbb2f"
   integrity sha512-ws57AidsDvREKrZKYffXddNkyaF14iHNHm8VQnZH6t99E8gczjNN0GpvcGny0imC80yQ0tHz1xVUKk/KFQSUyA==
 
-"@emdgroup-liquid/liquid@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@emdgroup-liquid/liquid/-/liquid-2.3.1.tgz#8f3c642c6c4bd0acfd6f85cdc150547dcd18881e"
-  integrity sha512-FRW0ms0UI/Uv6+89YhM019Zlyinj1/XqsIE8bNgYHGzBv53rupOijL0jPb8ObE3oy/WpxfPAxAUlXZo9cxx7vw==
-  dependencies:
-    "@stencil/core" "^2.16.1"
-    tether "^2.0.0"
-
 "@emotion/cache@^10.0.27":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -1543,11 +1535,6 @@
   dependencies:
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
-
-"@stencil/core@^2.16.1":
-  version "2.17.1"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.17.1.tgz#c0fd74d2991c2ea9d7e382017726bfd01009a05c"
-  integrity sha512-ErjQsNALgZQ9SYeBHhqwL1UO+Zbptwl3kwrRJC2tGlc3G/T6UvPuaKr+PGsqI+CZGia+0+R5EELQvFu74mYeIg==
 
 "@storybook/addon-actions@6.5.0-alpha.39", "@storybook/addon-actions@^6.5.0-alpha.39":
   version "6.5.0-alpha.39"
@@ -10716,11 +10703,6 @@ test-exclude@^6.0.0:
     "@istanbuljs/schema" "^0.1.2"
     glob "^7.1.4"
     minimatch "^3.0.4"
-
-tether@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/tether/-/tether-2.0.0.tgz#8ccb03992e71e2e913e6b1d4feb6be8cb49a4f79"
-  integrity sha512-iAkyBhwILpLIvkwzO5w5WUBtpYwxvzLRTO+sbzF3Uy7X4zznsy73v2b4sOQHXE3CQHeSNtB/YMU2Nn9tocbeBQ==
 
 text-table@^0.2.0:
   version "0.2.0"

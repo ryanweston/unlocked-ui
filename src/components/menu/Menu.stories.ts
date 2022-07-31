@@ -17,19 +17,9 @@ export const Default = Template.bind({})
 Default.args = {
   navigation: [
     { text: 'Documentation', href: 'http://docs.unlocked.to', size: 'small', type: 'text' },
-    { text: 'Our mission', href: '#', size: 'small', type: 'text', disabled: true },
-    { text: 'Roadmap', href: 'https://github.com/orgs/UnlockedUI/projects/1', size: 'small', type: 'text' },
-    {
-      text: 'Products',
-      href: 'https://github.com/orgs/UnlockedUI',
-      size: 'small',
-      type: 'text',
-      items: [
-        { text: 'Documentation', href: 'http://docs.unlocked.to', size: 'small', type: 'text' },
-        { text: 'Our mission', href: '#', size: 'small', type: 'text', disabled: true },
-      ],
-    },
-    { text: 'Coming soon', href: '#', size: 'small', type: 'primary', disabled: true },
+    { text: 'Our mission', href: '#', size: 'small', type: 'text' },
+    { text: 'Roadmap', href: 'https://github.com/orgs/UnlockedUI/projects/1', size: 'small', type: 'text', disabled: true },
+    { text: 'Install Unlocked', href: '#', size: 'small', type: 'primary', disabled: false },
   ],
   brand: 'Unlocked',
   logoHref: '/',

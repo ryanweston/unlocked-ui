@@ -14,6 +14,7 @@ export interface ButtonProps {
   first?: boolean
   last?: boolean
   active?: boolean
+  text?: string
 }
 
 const emit = defineEmits(['click', 'mouseover', 'mouseleave'])
@@ -83,7 +84,9 @@ export default { name: 'u-button' }
       <slot name="prefixIcon" />
     </div>
 
-    <slot />
+    <slot>
+      {{ props.text }}
+    </slot>
 
     <div v-if="$slots.appendIcon" class="ml-2">
       <slot name="appendIcon" />
@@ -99,7 +102,10 @@ export default { name: 'u-button' }
     <div v-if="$slots.prefixIcon" class="mr-2">
       <slot name="prefixIcon" />
     </div>
-    <slot name="default" />
+    <slot name="default">
+      {{ props.text }}
+    </slot>
+
     <div v-if="$slots.appendIcon" class="ml-2">
       <slot name="appendIcon" />
     </div>

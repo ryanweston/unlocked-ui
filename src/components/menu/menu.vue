@@ -4,21 +4,12 @@ import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { UButton } from '@/components/button'
 import { UHeadline } from '@/components/typography/headline'
 import { withTheme } from '@/theme/withTheme'
+import type { ButtonProps } from '@/components/button'
 
 // Use Button types here to avoid repitition
-export interface Items {
-  text: string
-  href?: string
-  size?: string
-  type?: string
-  iconSrc?: string
-  disabled?: boolean
-  external?: boolean
-  items?: Array<Items>
-}
 
 export interface MenuProps {
-  navigation?: Array<Items>
+  navigation?: Array<ButtonProps>
   logo?: string
   logoHref?: string
   brand?: string
@@ -89,11 +80,13 @@ export default { name: 'u-menu' }
               <UButton
                 v-for="item in navigation"
                 :key="item.text"
+                :disabled="item.disabled"
+                :href="item.href"
                 :size="item.size"
                 :type="item.type"
-              >
-                {{ item.text }}
-              </UButton>
+                :target="item.target"
+                :text="item.text"
+              />
             </slot>
           </div>
         </div>
@@ -108,11 +101,13 @@ export default { name: 'u-menu' }
           <UButton
             v-for="item in navigation"
             :key="item.text"
+            :disabled="item.disabled"
+            :href="item.href"
             :size="item.size"
             :type="item.type"
-          >
-            {{ item.text }}
-          </UButton>
+            :target="item.target"
+            :text="item.text"
+          />
         </slot>
       </div>
     </DisclosurePanel>

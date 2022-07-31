@@ -1,7 +1,7 @@
 {
-  "name": "@unlocked/foundation",
-  "version": "0.9.92-beta.4",
-  "description": "",
+  "name": "@unlocked/base",
+  "version": "0.0.1-beta.1",
+  "description": "Unlocked component library built with Tailwind & Vue.",
   "module": "./dist/esm/index.js",
   "files": [
     "dist",
@@ -10,14 +10,14 @@
   ],
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
-    "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "release": "bumpp --commit --tag --push",
+    "build:lib": "vite build && vue-tsc --declaration --emitDeclarationOnly",
+    "build:tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify",
+    "build:storybook": "build-storybook",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "bumpp --commit --tag --push"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue}": [
@@ -25,8 +25,8 @@
       "git add"
     ]
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Component library", "Unlocked", "UI", "Vue component library", "Tailwind", "Tailwind component library"],
+  "author": "Ryan Weston",
   "license": "ISC",
   "dependencies": {
     "@headlessui/vue": "^1.0.0",
@@ -64,5 +64,14 @@
     "vue": "^3.2.33",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^0.34.6"
-  }
+  },
+  "main": "./dist/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanweston/unlocked-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanweston/unlocked-ui/issues"
+  },
+  "homepage": "https://github.com/ryanweston/unlocked-ui#readme"
 }

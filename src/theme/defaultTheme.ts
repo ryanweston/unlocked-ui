@@ -80,7 +80,7 @@ export const defaultTheme = {
   icon: {
     disabled: 'text-disabledIcon',
     variants: {
-      default: 'text-iconOne',
+      primary: 'text-iconOne',
       secondary: 'text-iconTwo',
       contrast: 'text-iconThree',
     },
@@ -90,31 +90,31 @@ export const defaultTheme = {
     disabled: 'opacity-50 cursor-not-allowed pointer-events-none',
   },
   headline: {
-    base: 'text-textOne font-bold',
+    base: 'text-textOne',
     size: {
-      1: 'text-8xl',
-      2: 'text-6xl',
-      3: 'text-4xl',
-      4: 'text-2xl',
-      5: 'text-xl',
-      6: 'text-lg',
+      1: 'text-8xl sm:text-8xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-8xl font-bold',
+      2: 'text-6xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-semibold',
+      3: 'text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-medium',
+      4: 'text-2xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl font-medium',
+      5: 'text-xl sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-xl font-medium',
+      6: 'text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg font-semibold',
     },
   },
   subtitle: {
     base: 'text-textOne',
     size: {
-      1: 'text-lg',
-      2: 'text-base',
+      1: 'text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-lg',
+      2: 'text-base sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base',
     },
   },
   body: {
     base: 'text-textOne',
     size: {
-      1: 'text-base',
-      2: 'text-sm',
+      1: 'text-base sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base',
+      2: 'text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-sm',
     },
   },
   caption: {
-    base: 'text-xs text-textOne',
+    base: 'text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs 2xl:text-xs text-textOne',
   },
 }

@@ -14,9 +14,9 @@ declare module '@vue/runtime-core' {
     ULink: typeof import('@unlocked/foundation')['ULink']
     UIcon: typeof import('@unlocked/foundation')['UIcon']
     UHeadline: typeof import('@unlocked/foundation')['UHeadline']
-    UTitle: typeof import('@unlocked/foundation')['UTitle']
     USubtitle: typeof import('@unlocked/foundation')['Subtitle']
     UBody: typeof import('@unlocked/foundation')['UBody']
+    UCaption: typeof import('@unlocked/foundation')['UCaption']
   }
 }
 

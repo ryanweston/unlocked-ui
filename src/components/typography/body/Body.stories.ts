@@ -12,8 +12,15 @@ const Template: Story = args => ({
   template: '<Body v-bind="args"> {{ args.default }} </Body>',
 })
 
-export const Default = Template.bind({})
+export const One = Template.bind({})
+export const Two = Template.bind({})
 
-Default.args = {
+One.args = {
   default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 1,
+}
+
+Two.args = {
+  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 2,
 }

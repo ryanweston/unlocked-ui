@@ -12,7 +12,7 @@ const dropdown = (tokens: UTokens) => {
         leaveFromClass: 'transform opacity-100 scale-100',
         leaveToClass: 'transform opacity-0 scale-95',
       },
-      menu: `origin-top-right absolute right-0 border border-${tokens.layoutContrast} mt-2 w-56 rounded-md shadow-lg bg-${tokens.layoutBackground} ring-1 ring-primary ring-opacity-5 focus:outline-none py-2`,
+      menu: `origin-top-right absolute right-0 border border-${tokens.interfaceContrast} mt-2 w-56 rounded-md shadow-lg bg-${tokens.interfaceOne} ring-1 ring-focusOne ring-opacity-5 focus:outline-none py-2`,
     },
   }
 }

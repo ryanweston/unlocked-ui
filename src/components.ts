@@ -9,7 +9,7 @@ import { UTooltip } from './components/tooltip'
 import { UIcon } from './components/icon'
 import { UDropdownItem } from './components/dropdown-item'
 import { UHeadline } from './components/typography/headline'
-import { UTitle } from './components/typography/title'
+import { UCaption } from './components/typography/caption'
 import { USubtitle } from './components/typography/subtitle'
 import { UBody } from './components/typography/body'
 
@@ -24,7 +24,7 @@ export default [
   UTooltip,
   UIcon,
   UHeadline,
-  UTitle,
+  UCaption,
   USubtitle,
   UBody,
 ] as Plugin[]

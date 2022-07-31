@@ -6,7 +6,7 @@ export interface ButtonProps {
   class?: string
   size?: string
   disabled?: boolean
-  type?: string
+  type?: 'primary' | 'secondary' | 'variant' | 'error' | 'success'
   ariaRole?: string
   href?: string
   target?: string
@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   active: false,
   size: 'medium',
   disabled: false,
-  type: 'default',
+  type: 'primary',
   ariaRole: 'button',
 })
 

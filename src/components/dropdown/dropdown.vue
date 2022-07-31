@@ -7,7 +7,7 @@ import { UIcon } from '@/components/icon'
 import { withTheme } from '@/theme'
 
 export interface Item {
-  text: string
+  text?: string
   active?: boolean
   class?: string
   disabled?: boolean
@@ -19,7 +19,7 @@ export interface Item {
 
 export interface DropdownProps {
   text?: string
-  items: Array<Item>
+  items?: Array<Item>
 }
 
 const props = defineProps<DropdownProps>()

@@ -2,7 +2,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { UButton } from '@/components/button'
-
+import { UHeadline } from '@/components/typography/headline'
 import { withTheme } from '@/theme'
 
 // Use Button types here to avoid repitition
@@ -19,9 +19,9 @@ export interface Items {
 
 export interface MenuProps {
   navigation?: Array<Items>
-  title?: string
   logo?: string
   logoHref?: string
+  brand?: string
 }
 
 const props = defineProps<MenuProps>()
@@ -74,9 +74,9 @@ export default { name: 'u-menu' }
                 </a>
               </template>
               <a v-else :href="props.logoHref">
-                <h3 :class="classes.logo.text">
-                  Unlocked
-                </h3>
+                <UHeadline :size="4" :class="classes.logo.text">
+                  {{ brand }}
+                </UHeadline>
               </a>
             </slot>
           </div>

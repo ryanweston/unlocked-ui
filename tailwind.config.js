@@ -1,5 +1,5 @@
 // THIS TAILWIND CONFIG IS ONLY TO WORK WITH STORYBOOK.
-const tokens = require('./tokens')
+const tokens = require('./.storybook/imports/tokens')
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
       sans: ['"Inter var"'],
     },
     extend: {
-      ...tokens,
+      colors: { ...tokens },
     },
   },
   plugins: [

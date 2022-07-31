@@ -2,6 +2,7 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { computed, ref } from 'vue'
 import { withTheme } from '@/theme'
+import { UBody } from '@/components/typography/body'
 
 export interface TooltipProps {
   top?: boolean
@@ -13,43 +14,40 @@ export interface TooltipProps {
 }
 
 const props = withDefaults(defineProps<TooltipProps>(), {
-  top: true,
   hover: true,
   click: false,
 })
 
 const classes = computed(() => {
   const styles = withTheme('tooltip')
-  const object = { ...styles }
 
   if (props.bottom) {
-    object.position = 'top-full mt-2'
-    return object
+    styles.position = styles.popover.positions.bottom
+    return styles
   }
 
   if (props.left) {
-    object.position = 'right-full mr-2'
-    return object
+    styles.position = styles.popover.positions.left
+    return styles
   }
 
   if (props.right) {
-    object.position = 'left-full ml-2'
-    return object
+    styles.position = styles.popover.positions.right
+    return styles
   }
 
   if (props.top) {
-    object.position = 'bottom-full mb-2'
-    return object
+    styles.position = styles.popover.positions.top
+    return styles
   }
-
-  return object
+  return styles
 })
 
 const open = ref(false)
 
 let activators: Record<string, (e: Event) => void> = {
-  mouseover: (e: Event) => reveal(),
-  mouseleave: (e: Event) => reveal(),
+  mouseenter: (e: Event) => reveal(),
+  mouseout: (e: Event) => reveal(),
 }
 
 const clickEvent = {
@@ -71,16 +69,16 @@ export default { name: 'u-tooltip' }
 </script>
 
 <template>
-  <Popover class="relative flex flex-col items-center">
+  <Popover :class="classes.wrapper">
     <PopoverButton>
       <slot name="activator" :on="activators" :reveal="reveal">
-        Solutions
+        Tooltip
       </slot>
     </PopoverButton>
 
-    <PopoverPanel v-if="open" static :class="['absolute z-10', classes.position]">
+    <PopoverPanel v-show="open" static :class="[classes.popover.base, classes.position]">
       <slot name="tooltip">
-        <div class="px-4 py-2 bg-primary text-${tokens.textContrast} rounded-full text-sm">
+        <div :class="classes.popover.tooltip">
           <slot />
         </div>
       </slot>

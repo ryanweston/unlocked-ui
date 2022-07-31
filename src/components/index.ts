@@ -9,6 +9,6 @@ export * from './dropdown-item'
 
 // Typography
 export * from './typography/headline'
-export * from './typography/title'
+export * from './typography/caption'
 export * from './typography/subtitle'
 export * from './typography/body'

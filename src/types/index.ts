@@ -8,24 +8,8 @@ export type SFCInstallWithContext<T> = SFCWithInstall<T> & {
 
 export type UTheme = Record<string, object>
 
-export interface UTokens {
-  text: string
-  primary: string
-  layoutBackground: string
-  error: string
-  warning: string
-  success: string
-  textContrast: string
-  background: string
-  layoutHover: string
-  layoutBorder: string
-  layoutContrast: string
-  layoutHeavyContrast: string
-  link: string
-}
+export type UTokens = Record<string, string>
 
 export interface UConfig {
   theme?: UTheme
-  tokens?: UTokens
-  components?: any
 }

@@ -9,26 +9,24 @@ export const parameters = {
     },
   },
   backgrounds: {
-    default: 'Theme',
+    default: 'Default',
     values: [
       {
-        name: 'Theme',
+        name: 'Default',
         value: '#000000',
-      },
-      {
-        name: 'Light',
-        value: '#3b5998',
       },
     ],  
   }
 }
 
 // Mock setup
-import { app } from '@storybook/vue3';
-import { defaultTheme } from '../src/theme/defaultTheme'
+import { app } from '@storybook/vue3'
 import { Unlocked } from '../src'
-import './tailwind.css'
-import './inter.css'
+import './imports/tailwind.css'
+import './imports/inter.css'
 
-app.use(Unlocked, { theme: defaultTheme})
+import { createTheme, tokenMap, componentThemes, defaultTheme } from '../src/index'
+
+console.log(createTheme(tokenMap, componentThemes))
+app.use(Unlocked, { theme: defaultTheme })
 

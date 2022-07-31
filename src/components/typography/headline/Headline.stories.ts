@@ -12,8 +12,38 @@ const Template: Story = args => ({
   template: '<Headline v-bind="args"> {{ args.default }} </Headline>',
 })
 
-export const Default = Template.bind({})
+export const One = Template.bind({})
+export const Two = Template.bind({})
+export const Three = Template.bind({})
+export const Four = Template.bind({})
+export const Five = Template.bind({})
+export const Six = Template.bind({})
 
-Default.args = {
+One.args = {
   default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 1,
+}
+
+Two.args = {
+  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 2,
+}
+
+Three.args = {
+  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 3,
+}
+
+Four.args = {
+  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 4,
+}
+
+Five.args = {
+  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 5,
+}
+Six.args = {
+  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 6,
 }

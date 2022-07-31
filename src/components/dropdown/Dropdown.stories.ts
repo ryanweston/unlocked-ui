@@ -18,9 +18,9 @@ export const Default = Template.bind({})
 
 Default.args = {
   items: [
-    { name: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui' },
-    { name: 'Web3 components', href: '/web3', disabled: false },
-    { name: 'Figma UI kit', href: '#', disabled: true },
+    { text: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui' },
+    { text: 'Web3 components', href: '/web3', disabled: false },
+    { text: 'Figma UI kit', href: '#', disabled: true },
   ],
   text: 'Example',
 }

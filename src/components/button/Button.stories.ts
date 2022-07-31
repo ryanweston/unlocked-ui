@@ -26,16 +26,17 @@ const Template: Story = args => ({
   template: code(args),
 })
 
-export const Default = Template.bind({})
+export const Primary = Template.bind({})
 export const Secondary = Template.bind({})
-export const Alternate = Template.bind({})
+export const Variant = Template.bind({})
 export const Text = Template.bind({})
-export const Warning = Template.bind({})
+export const Success = Template.bind({})
 export const Error = Template.bind({})
 export const Group = Template.bind({})
 
-Default.args = {
-  default: 'Default',
+Primary.args = {
+  type: 'primary',
+  default: 'Primary',
 }
 
 Secondary.args = {
@@ -43,9 +44,9 @@ Secondary.args = {
   default: 'Secondary',
 }
 
-Alternate.args = {
-  type: 'alternate',
-  default: 'Alternate',
+Variant.args = {
+  type: 'variant',
+  default: 'Variant',
 }
 
 Text.args = {
@@ -53,9 +54,9 @@ Text.args = {
   default: 'Text',
 }
 
-Warning.args = {
-  type: 'warning',
-  default: 'Warning',
+Success.args = {
+  type: 'success',
+  default: 'success',
 }
 
 Error.args = {

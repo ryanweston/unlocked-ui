@@ -11,6 +11,6 @@ export { default as itemClasses } from '@/components/dropdown-item/classes'
 
 // Typography
 export { default as headlineClasses } from '@/components/typography/headline/classes'
-export { default as titleClasses } from '@/components/typography/title/classes'
 export { default as subtitleClasses } from '@/components/typography/subtitle/classes'
 export { default as bodyClasses } from '@/components/typography/body/classes'
+export { default as captionClasses } from '@/components/typography/caption/classes'

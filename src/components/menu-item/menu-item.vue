@@ -26,17 +26,6 @@ const toggleDropdown = () => {
 }
 
 const slots = useSlots()
-
-const styles = withTheme('menuItem')
-
-const classes = [styles.base]
-
-if (props.disabled)
-  classes.push(styles.disabled)
-
-if (props.class)
-  classes.push(props.class)
-
 </script>
 
 <script lang="ts">
@@ -45,7 +34,6 @@ export default { name: 'u-menu-item' }
 
 <template>
   <UButton
-    :class="[classes]"
     :target="props.target"
     :disabled="props.disabled"
     :type="props.type"
@@ -65,7 +53,7 @@ export default { name: 'u-menu-item' }
     <UButton
       v-for="item in items"
       :key="item.name"
-      :class="[classes, 'ml-4']"
+      class="ml-4"
       :href="item.href"
       :target="item.target"
       :disabled="item.disabled"

@@ -1,27 +1,24 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Button from '../button/button.vue'
-import Tooltip from './tooltip.vue'
+import { UTooltip } from '@/components/tooltip'
+import { UButton } from '@/components/button'
 
 export default {
-  component: Tooltip,
+  component: UTooltip,
   title: 'Components/Tooltip',
-  args: {
-    hover: true,
-  },
 } as Meta
 
 const Template: Story = args => ({
-  components: { Tooltip, Button },
+  components: { UTooltip, UButton },
   setup() { return { args } },
   template: `
-    <Tooltip 
+    <UTooltip 
       v-bind="args"
     > 
       <template #activator={on}>
-        <Button v-on="on">Button</Button>
+        <UButton v-on="on">Button</UButton>
       </template>
       {{ args.default }}
-    </Tooltip>
+    </UTooltip>
   `,
 })
 
@@ -29,5 +26,5 @@ export const Default = Template.bind({})
 
 Default.args = {
   bottom: true,
-  default: 'Back to homepage',
+  default: 'Tooltip',
 }

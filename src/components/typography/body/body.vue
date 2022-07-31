@@ -3,12 +3,18 @@ import { withTheme } from '@/theme'
 
 export interface BodyProps {
   class?: string
+  size?: 1 | 2
 }
 
-const props = defineProps<BodyProps>()
+const props = withDefaults(defineProps<BodyProps>(), {
+  size: 1,
+})
 
 const styles = withTheme('body')
 const classes = [styles.base]
+
+classes.push(styles.size[props.size])
+
 if (props.class)
   classes.push(props.class)
 

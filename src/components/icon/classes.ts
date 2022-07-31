@@ -3,9 +3,11 @@ import type { UTokens } from '@/types'
 const icon = (tokens: UTokens) => {
   return {
     icon: {
-      base: `text-${tokens.text}`,
+      disabled: `text-${tokens.disabledIcon}`,
       variants: {
-        contrast: `text-${tokens.textContrast}`,
+        default: `text-${tokens.iconOne}`,
+        secondary: `text-${tokens.iconTwo}`,
+        contrast: `text-${tokens.iconThree}`,
       },
     },
   }

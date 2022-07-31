@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import { useSlots } from 'vue'
+import { computed, useSlots } from 'vue'
 import { withTheme } from '@/theme'
 
+export type Variants = 'default' | 'secondary' | 'contrast'
 export type Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 export interface IconProps {
@@ -12,9 +13,11 @@ export interface IconProps {
   height?: string
   path?: string
   src?: string
+  disabled?: boolean
 }
 
 const props = withDefaults(defineProps<IconProps>(), {
+  type: 'default',
   size: 'md',
 })
 
@@ -26,11 +29,19 @@ const sizes: any = {
   xl: 26,
 }
 
-const styles = withTheme('icon')
-const classes: any = [styles.base]
+const classes = computed (() => {
+  const theme = withTheme('icon')
+  const styles = []
 
-if (props.type)
-  classes.push(styles.variants[props.type])
+  if (props.disabled) {
+    styles.push(theme.disabled)
+    return styles
+  }
+
+  styles.push(theme.variants[props.type])
+
+  return styles
+})
 
 const slots = useSlots()
 

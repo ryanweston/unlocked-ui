@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { withTheme } from '@/theme'
 
-export interface TitleProps {
+export interface CaptionProps {
   class?: string
 }
 
-const props = defineProps<TitleProps>()
+const props = defineProps<CaptionProps>()
 
-const styles = withTheme('title')
+const styles = withTheme('caption')
 const classes = [styles.base]
 if (props.class)
   classes.push(props.class)
@@ -15,11 +15,11 @@ if (props.class)
 </script>
 
 <script lang="ts">
-export default { name: 'u-title' }
+export default { name: 'u-caption' }
 </script>
 
 <template>
-  <h2 :class="classes">
+  <p :class="classes">
     <slot />
-  </h2>
+  </p>
 </template>

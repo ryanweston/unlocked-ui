@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Link from '../link.vue'
+import Link from '@/components/link'
 
 export default {
   component: Link,

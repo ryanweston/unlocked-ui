@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/vue3'
 import { mdiAccount } from '@mdi/js'
-import Icon from '../icon.vue'
+import Icon from '@/components/icon'
 
 export default {
   component: Icon,
@@ -27,8 +27,21 @@ const Template: Story = args => ({
   </Icon>`,
 })
 
-export const Default = Template.bind({})
+export const Primary = Template.bind({})
+export const Secondary = Template.bind({})
+export const Contrast = Template.bind({})
 
-Default.args = {
+Primary.args = {
   size: 'md',
+  type: 'primary',
+}
+
+Secondary.args = {
+  size: 'md',
+  type: 'secondary',
+}
+
+Contrast.args = {
+  size: 'md',
+  type: 'contrast',
 }

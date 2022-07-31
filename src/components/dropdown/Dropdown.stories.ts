@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Dropdown from './dropdown.vue'
+import Dropdown from '@/components/dropdown'
 
 export default {
   component: Dropdown,

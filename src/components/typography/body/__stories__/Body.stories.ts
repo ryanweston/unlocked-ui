@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Body from '../body.vue'
+import Body from '@/components/typography/body'
 
 export default {
   component: Body,

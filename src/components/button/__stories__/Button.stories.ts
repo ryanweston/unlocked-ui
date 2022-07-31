@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/vue3'
 import { ref } from 'vue'
-import Button from './button.vue'
+import Button from '@/components/button'
 
 export default {
   component: Button,

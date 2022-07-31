@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Menu from './menu.vue'
+import Menu from '@/components/menu'
 
 export default {
   component: Menu,

@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Subtitle from '../subtitle.vue'
+import Subtitle from '@/components/typography/subtitle'
 
 export default {
   component: Subtitle,

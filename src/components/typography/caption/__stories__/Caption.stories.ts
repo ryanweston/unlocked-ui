@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Caption from '../caption.vue'
+import Caption from '@/components/typography/caption'
 
 export default {
   component: Caption,

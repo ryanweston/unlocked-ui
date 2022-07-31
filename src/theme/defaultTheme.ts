@@ -35,7 +35,7 @@ export const defaultTheme = {
       error: 'text-textInverse bg-actionError border border-actionError hover:opacity-70',
     },
     buttonGroup: {
-      base: 'bg-interfaceOne text-textInverse hover:bg-interfaceTwo',
+      base: 'bg-interfaceOne text-textOne hover:bg-interfaceTwo',
       active: 'bg-interactivePrimary text-textInverse',
       order: {
         first: 'rounded-l-lg rounded-r-none',
@@ -60,7 +60,7 @@ export const defaultTheme = {
     menu: 'origin-top-right absolute right-0 border border-interfaceContrast mt-2 w-56 rounded-md shadow-lg bg-interfaceOne ring-1 ring-focusOne ring-opacity-5 focus:outline-none py-2',
   },
   footer: {
-    wrapper: 'w-full border-t border-undefined',
+    wrapper: 'w-full border-t border-interfaceContrast',
     absolute: 'absolute bottom-0 left-0',
     container: 'max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-4 md:py-6',
   },

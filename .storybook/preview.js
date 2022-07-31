@@ -21,12 +21,12 @@ export const parameters = {
 
 // Mock setup
 import { app } from '@storybook/vue3'
-import { Unlocked } from '../src'
+import { unlocked } from '../src'
 import './imports/tailwind.css'
 import './imports/inter.css'
 
 import { createTheme, tokenMap, componentThemes, defaultTheme } from '../src/index'
 
 console.log(createTheme(tokenMap, componentThemes))
-app.use(Unlocked, { theme: defaultTheme })
+app.use(unlocked, { theme: defaultTheme })
 

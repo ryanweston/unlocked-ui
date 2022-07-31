@@ -6,7 +6,7 @@ export interface ButtonProps {
   class?: string
   size?: string
   disabled?: boolean
-  type?: 'primary' | 'secondary' | 'variant' | 'error' | 'success'
+  type?: 'primary' | 'secondary' | 'variant' | 'text' | 'error' | 'success'
   ariaRole?: string
   href?: string
   target?: string

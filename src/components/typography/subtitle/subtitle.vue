@@ -6,7 +6,9 @@ export interface SubtitleProps {
   size?: 1 | 2
 }
 
-const props = defineProps<SubtitleProps>()
+const props = withDefaults(defineProps<SubtitleProps>(), {
+  size: 1,
+})
 
 const styles = withTheme('subtitle')
 const classes = [styles.base]

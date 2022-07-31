@@ -2,12 +2,9 @@
 import { computed, useSlots } from 'vue'
 import { withTheme } from '@/theme/withTheme'
 
-export type Variants = 'default' | 'secondary' | 'contrast'
-export type Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-
 export interface IconProps {
-  size?: Sizes
-  type?: string
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  type?: 'primary' | 'secondary' | 'contrast'
   color?: string
   width?: string
   height?: string
@@ -17,7 +14,7 @@ export interface IconProps {
 }
 
 const props = withDefaults(defineProps<IconProps>(), {
-  type: 'default',
+  type: 'primary',
   size: 'md',
 })
 

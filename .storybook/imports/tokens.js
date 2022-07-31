@@ -35,7 +35,7 @@ module.exports = {
   inputOne: '#272727', // No description
   inputTwo: '#cf2121', // No description
   inputThree: '#169d00', // No description
-  iconOne: '#333337', // No description
+  iconOne: '#ffffff', // No description
   iconTwo: '#b1b1b1', // No description
   iconThree: '#169d00', // No description
   textInverse: '#000000', // No description

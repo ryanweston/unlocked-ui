@@ -1,5 +1,5 @@
 import Headline from './headline.vue'
-import { installComponent } from '@/utils/install'
+import { installComponent } from '@/utils/installComponent'
 
 export const UHeadline = installComponent(Headline)
 export default UHeadline

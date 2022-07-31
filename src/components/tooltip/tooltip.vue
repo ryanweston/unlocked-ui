@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { computed, ref } from 'vue'
-import { withTheme } from '@/theme'
-import { UBody } from '@/components/typography/body'
+import { withTheme } from '@/theme/withTheme'
 
 export interface TooltipProps {
   top?: boolean

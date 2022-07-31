@@ -1,5 +1,5 @@
 import Icon from './icon.vue'
-import { installComponent } from '@/utils/install'
+import { installComponent } from '@/utils/installComponent'
 
 export const UIcon = installComponent(Icon)
 export default UIcon

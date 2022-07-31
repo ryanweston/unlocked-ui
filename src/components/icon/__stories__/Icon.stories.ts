@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/vue3'
 import { mdiAccount } from '@mdi/js'
-import Icon from './icon.vue'
+import Icon from '../icon.vue'
 
 export default {
   component: Icon,

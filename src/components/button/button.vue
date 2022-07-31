@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
-import { withTheme } from '@/theme'
+import { withTheme } from '@/theme/withTheme'
 
 export interface ButtonProps {
   class?: string

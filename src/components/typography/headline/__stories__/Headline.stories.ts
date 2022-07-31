@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/vue3'
-import Headline from './headline.vue'
+import Headline from '../headline.vue'
 
 export default {
   component: Headline,

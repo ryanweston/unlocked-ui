@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@heroicons/vue/solid'
 import { UButton } from '@/components/button'
 import { UDropdownItem } from '@/components/dropdown-item'
 import { UIcon } from '@/components/icon'
-import { withTheme } from '@/theme'
+import { withTheme } from '@/theme/withTheme'
 
 export interface Item {
   text?: string

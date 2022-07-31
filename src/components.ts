@@ -13,6 +13,8 @@ import { UCaption } from './components/typography/caption'
 import { USubtitle } from './components/typography/subtitle'
 import { UBody } from './components/typography/body'
 
+// Export all components in a typesafe format to
+// install to a Vue instance globally.
 export default [
   UMenu,
   UMenuItem,

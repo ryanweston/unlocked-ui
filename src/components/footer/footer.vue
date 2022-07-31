@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { withTheme } from '@/theme'
+import { withTheme } from '@/theme/withTheme'
 
 export interface FooterProps {
   class?: string

@@ -3,7 +3,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { UButton } from '@/components/button'
 import { UHeadline } from '@/components/typography/headline'
-import { withTheme } from '@/theme'
+import { withTheme } from '@/theme/withTheme'
 
 // Use Button types here to avoid repitition
 export interface Items {

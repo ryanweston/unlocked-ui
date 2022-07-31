@@ -1,5 +1,5 @@
 import menu from './menu.vue'
-import { installComponent } from '@/utils/install'
+import { installComponent } from '@/utils/installComponent'
 
 export const UMenu = installComponent(menu)
 export default UMenu

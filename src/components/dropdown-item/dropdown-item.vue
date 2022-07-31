@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useSlots } from 'vue'
-import { withTheme } from '@/theme'
+import { withTheme } from '@/theme/withTheme'
 
 export interface DropdownItemProps {
   text: string

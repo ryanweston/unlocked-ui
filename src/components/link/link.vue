@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { computed, ref, useSlots } from 'vue'
-import { withTheme } from '@/theme'
+import { computed, useSlots } from 'vue'
+import { withTheme } from '@/theme/withTheme'
 
 export interface LinkProps {
   class?: string
@@ -51,12 +51,12 @@ export default { name: 'u-link' }
     :target="props.target"
     @click="e => emit('click', e)"
   >
-    <!-- <div v-if="$slots.prefixIcon" class="mr-2">
+    <div v-if="$slots.prefixIcon" class="mr-2">
       <slot name="prefixIcon" />
-    </div> -->
+    </div>
     <slot />
-    <!-- <div v-if="$slots.appendIcon" class="ml-2">
+    <div v-if="$slots.appendIcon" class="ml-2">
       <slot name="appendIcon" />
-    </div> -->
+    </div>
   </a>
 </template>

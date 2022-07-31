@@ -2,7 +2,6 @@ import type { App, Plugin } from 'vue'
 import components from '@/components'
 import type { UConfig } from '@/types'
 import { ConfigKey } from '@/utils/symbols'
-// import { componentThemes, createTheme, tokenMap } from '@/theme/theme'
 
 const createGlobalPlugin = (components: Plugin[] = []) => {
   const install = (app: App, options: UConfig) => {
@@ -17,4 +16,4 @@ const createGlobalPlugin = (components: Plugin[] = []) => {
 }
 
 // Export plugin installation method for global install
-export const Unlocked = createGlobalPlugin([...components])
+export const unlocked = createGlobalPlugin([...components])

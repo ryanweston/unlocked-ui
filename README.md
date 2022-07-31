@@ -9,7 +9,7 @@
 <p align="center">
   
    <a href="https://app.netlify.com/sites/unlocked-storybook/deploys">
-    <img src="https://img.shields.io/npm/v/@unlocked/foundation">
+    <img src="https://img.shields.io/npm/v/@unlocked/base">
   </a>
   
   <a href="https://app.netlify.com/sites/unlocked-storybook/deploys">
@@ -17,7 +17,7 @@
   </a>
   
   <a href="#">
-    <img src="https://img.shields.io/npm/dm/@unlocked/foundation">
+    <img src="https://img.shields.io/npm/dm/@unlocked/base">
   </a>
   
 </p>
@@ -68,3 +68,10 @@ Message types:
 - revert
 - style
 - test
+
+## Release
+When ready to release ensure you utilise the correct workflow.
+
+```console
+yarn release
+```

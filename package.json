@@ -1,6 +1,6 @@
 {
   "name": "@unlocked/base",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "Unlocked component library built with Tailwind & Vue.",
   "module": "./dist/esm/index.js",
   "files": [
@@ -25,7 +25,14 @@
       "git add"
     ]
   },
-  "keywords": ["Component library", "Unlocked", "UI", "Vue component library", "Tailwind", "Tailwind component library"],
+  "keywords": [
+    "Component library",
+    "Unlocked",
+    "UI",
+    "Vue component library",
+    "Tailwind",
+    "Tailwind component library"
+  ],
   "author": "Ryan Weston",
   "license": "ISC",
   "dependencies": {

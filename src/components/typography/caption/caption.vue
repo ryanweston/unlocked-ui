@@ -2,7 +2,7 @@
 import { withTheme } from '@/theme/withTheme'
 
 export interface CaptionProps {
-  class?: string
+  class?: string | string[]
 }
 
 const props = defineProps<CaptionProps>()

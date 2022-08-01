@@ -2,7 +2,7 @@
 import { withTheme } from '@/theme/withTheme'
 
 export interface FooterProps {
-  class?: string
+  class?: string | string[]
   absolute?: boolean
 }
 

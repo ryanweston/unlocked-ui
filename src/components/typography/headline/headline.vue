@@ -3,7 +3,7 @@
 import { withTheme } from '@/theme/withTheme'
 
 export interface HeadlineProps {
-  class?: string
+  class?: string | string[]
   size?: 1 | 2 | 3 | 4 | 5 | 6
 }
 

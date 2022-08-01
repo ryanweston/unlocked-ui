@@ -2,7 +2,7 @@
 import { withTheme } from '@/theme/withTheme'
 
 export interface SubtitleProps {
-  class?: string
+  class?: string | string[]
   size?: 1 | 2
 }
 

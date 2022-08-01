@@ -3,8 +3,8 @@ import { computed, useSlots } from 'vue'
 import { withTheme } from '@/theme/withTheme'
 
 export interface ButtonProps {
-  class?: string
-  size?: string
+  class?: string | string[]
+  size?: 'small' | 'medium' | 'large'
   disabled?: boolean
   type?: 'primary' | 'secondary' | 'variant' | 'text' | 'error' | 'success'
   ariaRole?: string
@@ -17,7 +17,7 @@ export interface ButtonProps {
   text?: string
 }
 
-const emit = defineEmits(['click', 'mouseover', 'mouseleave'])
+const emit = defineEmits(['click', 'mouseenter', 'mouseout'])
 
 // TODO: Handle reusable props such as type & size as individual props to
 // improve developer experience
@@ -79,6 +79,8 @@ export default { name: 'u-button' }
     :href="props.href"
     :target="props.target"
     @click="e => emit('click', e)"
+    @mouseenter="e => emit('mouseenter', e)"
+    @mouseout="e => emit('mouseout', e)"
   >
     <div v-if="$slots.prefixIcon" class="mr-2">
       <slot name="prefixIcon" />
@@ -98,6 +100,8 @@ export default { name: 'u-button' }
     :class="classes"
     :role="ariaRole"
     @click="e => emit('click', e)"
+    @mouseenter="e => emit('mouseenter', e)"
+    @mouseout="e => emit('mouseout', e)"
   >
     <div v-if="$slots.prefixIcon" class="mr-2">
       <slot name="prefixIcon" />

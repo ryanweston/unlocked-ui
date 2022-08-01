@@ -1,24 +1,24 @@
 import type { UTheme } from '@/types'
 
-import menu from '@/components/menu/classes'
 import button from '@/components/button/classes'
 import link from '@/components/link/classes'
-import dropdown from '@/components/dropdown/classes'
 import footer from '@/components/footer/classes'
 import tooltip from '@/components/tooltip/classes'
 import icon from '@/components/icon/classes'
-import dropdownItem from '@/components/dropdown-item/classes'
 import headline from '@/components/typography/headline/classes'
 import caption from '@/components/typography/caption/classes'
 import subtitle from '@/components/typography/subtitle/classes'
 import body from '@/components/typography/body/classes'
 
-export const componentThemes = [menu, button, link, dropdown, footer, tooltip, icon, dropdownItem, headline, subtitle, body, caption]
+export const componentThemes = [button, link, footer, tooltip, icon, headline, subtitle, body, caption]
 
-export const createTheme = (tokens: any, components: Array<Function>): UTheme => {
+export const createTheme = (tokens: any, components: Array<Function | Object>): UTheme => {
   let theme = {}
   components.forEach((item: any) => {
-    theme = { ...theme, ...item(tokens) }
+    if (typeof item === 'function')
+      theme = { ...theme, ...item(tokens) }
+    else
+      theme = { ...theme, ...item }
   })
 
   return theme

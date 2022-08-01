@@ -25,8 +25,8 @@ import { unlocked } from '../src'
 import './imports/tailwind.css'
 import './imports/inter.css'
 
-import { createTheme, tokenMap, componentThemes, defaultTheme } from '../src/index'
+// import { createTheme, tokenMap, componentThemes, defaultTheme } from '../src/index'
 
-console.log(createTheme(tokenMap, componentThemes))
+// console.log(createTheme(tokenMap, componentThemes))
 app.use(unlocked, { theme: defaultTheme })
 

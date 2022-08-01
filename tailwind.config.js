@@ -1,5 +1,5 @@
 // THIS TAILWIND CONFIG IS ONLY TO WORK WITH STORYBOOK.
-const tokens = require('./.storybook/imports/tokens')
+const tokens = require('./tokens.js')
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {

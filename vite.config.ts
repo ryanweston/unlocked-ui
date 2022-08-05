@@ -4,12 +4,14 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  alias: [
-    {
-      find: '@',
-      replacement: path.resolve(__dirname, 'src'),
-    },
-  ],
+  resolve: {
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src'),
+      },
+    ],
+  },
   plugins: [vue()],
   build: {
     sourcemap: true,
@@ -19,8 +21,6 @@ export default defineConfig({
       fileName: format => `Unlocked.${format}.js`,
     },
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
       external: ['vue'],
       output: [{
         format: 'esm',
@@ -29,7 +29,7 @@ export default defineConfig({
         preserveModules: true,
         preserveModulesRoot: 'src',
         exports: 'named',
-        entryFileNames: '[name].js',
+        entryFileNames: '[name].mjs',
       },
       ],
     },

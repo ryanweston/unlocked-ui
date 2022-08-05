@@ -12,7 +12,7 @@ export * from './theme/defaultTheme'
 export * from './types'
 
 // Installers
-// export * from './utils/modular-install'
+export * from './utils/installModularApp'
 export * from './utils/installApp'
 
 // @ts-expect-error will compile into type file

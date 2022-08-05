@@ -4,6 +4,12 @@ import Subtitle from '@/components/typography/subtitle'
 export default {
   component: Subtitle,
   title: 'Components/Subtitle',
+  argTypes: {
+    size: {
+      control: { type: 'select' },
+      options: [1, 2],
+    },
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -21,6 +27,6 @@ One.args = {
 }
 
 Two.args = {
-  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  size: 1,
+  ...One.args,
+  size: 2,
 }

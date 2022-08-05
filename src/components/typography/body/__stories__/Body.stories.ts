@@ -4,6 +4,12 @@ import Body from '@/components/typography/body'
 export default {
   component: Body,
   title: 'Components/Body',
+  argTypes: {
+    size: {
+      control: { type: 'select' },
+      options: [1, 2],
+    },
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -21,6 +27,6 @@ One.args = {
 }
 
 Two.args = {
-  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  ...One.args,
   size: 2,
 }

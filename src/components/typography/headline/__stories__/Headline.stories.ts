@@ -4,6 +4,12 @@ import Headline from '@/components/typography/headline'
 export default {
   component: Headline,
   title: 'Components/Headline',
+  argTypes: {
+    size: {
+      control: { type: 'select' },
+      options: [1, 2, 3, 4, 5, 6],
+    },
+  },
 } as Meta
 
 const Template: Story = args => ({
@@ -25,25 +31,29 @@ One.args = {
 }
 
 Two.args = {
-  default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  ...One.args,
   size: 2,
 }
 
 Three.args = {
+  ...One.args,
   default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   size: 3,
 }
 
 Four.args = {
+  ...One.args,
   default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   size: 4,
 }
 
 Five.args = {
+  ...One.args,
   default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   size: 5,
 }
 Six.args = {
+  ...One.args,
   default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   size: 6,
 }

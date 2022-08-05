@@ -5,6 +5,12 @@ import Button from '@/components/button'
 export default {
   component: Button,
   title: 'Components/Button',
+  argTypes: {
+    type: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary', 'variant', 'success', 'error'],
+    },
+  },
 } as Meta
 
 const code = (args: any) => {
@@ -36,35 +42,35 @@ export const Group = Template.bind({})
 
 Primary.args = {
   type: 'primary',
-  default: 'Primary',
+  default: 'Button',
 }
 
 Secondary.args = {
+  ...Primary.args,
   type: 'secondary',
-  default: 'Secondary',
 }
 
 Variant.args = {
+  ...Primary.args,
   type: 'variant',
-  default: 'Variant',
 }
 
 Text.args = {
+  ...Primary.args,
   type: 'text',
-  default: 'Text',
 }
 
 Success.args = {
+  ...Primary.args,
   type: 'success',
-  default: 'success',
 }
 
 Error.args = {
+  ...Primary.args,
   type: 'error',
-  default: 'Error',
 }
 
 Group.args = {
+  ...Primary.args,
   group: true,
-  default: 'Group',
 }

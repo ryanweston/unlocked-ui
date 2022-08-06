@@ -37,9 +37,11 @@ Unlocked is community driven and relies on feedback to help improve. 🎉
 - [Join our Discord](github.com/ryanweston)
 - [Follow our Twitter](github.com/ryanweston)
 
-## Getting started
+## 📦 Getting started
 
 For more complete documentation, please refer to our [official documentation](docs.unlocked.to).
+
+### Installation
 
 To install in your Vue application: 
 
@@ -54,8 +56,23 @@ yarn add @unlocked/foundation
   theme: defaultTheme
  })
  ```
+ 
+ ### Usage
+ 
+ With global registration, your components don't need to be imported! If you want a modular apporach, please refer to our [official documentation](docs.unlocked.to).
+ 
+ ```html
+<u-button>Button</u-button>
+```
 
-## Commit style
+### Customisation
+
+For more information on customisationa and managing your theme, please refer to our [official documentation](docs.unlocked.to).
+
+
+## 🔧 Development & maintenance
+
+### Commit style
 Commit messages must conform to the to the [conventional commits format](https://www.conventionalcommits.org/en/v1.0.0/#summary).
 
 ```bash 
@@ -71,9 +88,24 @@ Message types:
 - style
 - test
 
-## Release
+### Storybook
+Please ensure that Storybook's static build has been tested before you push to master.
+
+```console
+yarn build:storybook
+```
+
+```console
+npx http-server storybook-static
+```
+
+### Release
 When ready to release ensure you utilise the correct workflow.
 
 ```console
 yarn release
 ```
+
+## 📄 License
+
+[MIT License](https://github.com/UnlockedUI/unlocked-ui/blob/master/LICENSE) © 2022-PRESENT [Ryan Weston](https://github.com/ryanweston)

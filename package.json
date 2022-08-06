@@ -2,6 +2,8 @@
   "name": "@unlocked/base",
   "version": "0.0.1-beta.8",
   "description": "Unlocked component library built with Tailwind & Vue.",
+  "author": "Ryan Weston",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "files": [
     "dist",
@@ -9,6 +11,7 @@
     "tokens.js"
   ],
   "types": "dist/esm/index.d.ts",
+  "license": "MIT",
   "scripts": {
     "dev": "start-storybook -p 6006",
     "build:lib": "vite build && vue-tsc --declaration --emitDeclarationOnly",
@@ -33,8 +36,6 @@
     "Tailwind",
     "Tailwind component library"
   ],
-  "author": "Ryan Weston",
-  "license": "ISC",
   "dependencies": {
     "@headlessui/vue": "^1.0.0",
     "@heroicons/vue": "^1.0.6"
@@ -72,7 +73,6 @@
     "vue-loader": "^16.8.3",
     "vue-tsc": "^0.34.6"
   },
-  "main": "./dist/esm/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ryanweston/unlocked-ui.git"

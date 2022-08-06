@@ -37,6 +37,14 @@ Unlocked is community driven and relies on feedback to help improve. 🎉
 - [Join our Discord](github.com/ryanweston)
 - [Follow our Twitter](github.com/ryanweston)
 
+## 🚀 Features
+
+- ⚡️ Treeshakable imports
+- 🧱 Atomic interface components
+- 🎨 Theming system
+- 📚 Custom tokens
+- 🦄 Easy integration with UI kit
+
 ## 📦 Getting started
 
 For more complete documentation, please refer to our [official documentation](docs.unlocked.to).

@@ -26,9 +26,11 @@
 
 Unlocked is a forward thinking, modern Tailwind based component library built for Vue. 
 
-We're currently solely maintained by Unlocked's creator [Ryan Weston](github.com/ryanweston). Unlocked was built with the aim to help provide a foundation for your design system and to enable developers and designers to be able to quickly prototype and build modern applications with ease. 
+We're currently solely maintained by Unlocked's creator [Ryan Weston](github.com/ryanweston). Unlocked was built with the aim to help tackle issues presented by utilising component libraries, especially tackling the pain points you get when trying to transition your product into using a design system. 
 
-As we look to the future of the web, we're looking to provide tools for developers adopting new forward thinking web technologies such as Web3, AR & VR. We're adopting this ethos as we built out our [Web3 components](unlocked.to/web3). These are compositional components, inspired by TailwindUI and built with Unlocked, to help fastrack your Web3 projects. 🚀
+We follow the atomic design principles, providing base components within our component library, then providing copy and pastable molecules and organisms under the name 'compositions. These can be found at [Unlocked compositions](https://unlocked.to/compositions). 
+
+This is all with the aim to invert provide the ability for you be able to quickly scale up your product with customisable, premade components. All while providing utilities to invert control. Giving you the ability to easily change complex components without having to wrap them, preintergrated design tokens and a theming system that gives you complete control!
 
 Unlocked is community driven and relies on feedback to help improve. 🎉
 
@@ -41,14 +43,14 @@ For more complete documentation, please refer to our [official documentation](do
 
 To install in your Vue application: 
 
-```bash 
+```console
 yarn add @unlocked/foundation
 ```
 
  ```js
  import { unlockedGlobal, defaultTheme } from '@unlocked/foundation'
  
- app.use(unlockedGlobal, { 
+ app.use(unlocked, { 
   theme: defaultTheme
  })
  ```

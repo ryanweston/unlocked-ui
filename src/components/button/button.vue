@@ -62,8 +62,6 @@ const classes = computed(() => {
   if (props.class)
     array.push(props.class)
 
-  // TODO: potentially abstract group button logic away
-
   return array
 })
 </script>

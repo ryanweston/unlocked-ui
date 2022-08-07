@@ -12,6 +12,7 @@ import body from '@/components/typography/body/classes'
 
 export const componentThemes = [button, link, footer, tooltip, icon, headline, subtitle, body, caption]
 
+// Generates a theme object
 export const createTheme = (tokens: any, components: Array<Function | Object>): UTheme => {
   let theme = {}
   components.forEach((item: any) => {
@@ -24,6 +25,7 @@ export const createTheme = (tokens: any, components: Array<Function | Object>): 
   return theme
 }
 
+// Binds/maps token names
 export const tokenMap = {
   brandPrimary: 'brandPrimary',
   actionSuccess: 'actionSuccess',

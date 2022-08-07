@@ -1,6 +1,7 @@
 import type { App } from 'vue'
 import type { SFCWithInstall } from '@/types'
 
+// Registers the component passed to it to the global vue instance
 export const installComponent = <T, E extends Record<string, any>>(main: T, extra?: E) => {
   (main as SFCWithInstall<T>).install = (app: App): void => {
     // structure as array in case any extras need adding to parameters

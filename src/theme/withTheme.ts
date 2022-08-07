@@ -5,7 +5,7 @@ import { ConfigKey } from '@/utils/symbols'
 export const withTheme = (component: string) => {
   const { theme } = injectStrict(ConfigKey)
 
-  // @ts-expect-error oops
+  // @ts-expect-error needs a type
   const { [component]: styles } = theme
 
   if (!styles) throw new Error(`${component} has no theming`)

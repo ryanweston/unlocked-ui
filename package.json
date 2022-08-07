@@ -41,7 +41,7 @@
     "@heroicons/vue": "^1.0.6"
   },
   "peerDependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.2.33"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.16.1",

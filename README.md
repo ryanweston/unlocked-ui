@@ -24,7 +24,7 @@
 
 # Unlocked UI
 
-Unlocked is a forward thinking, modern Tailwind based component library built for Vue3+. 
+Unlocked is a forward thinking, modern Tailwind based component library built for Vue 3. 
 
 We're currently solely maintained by Unlocked's creator [Ryan Weston](github.com/ryanweston). Unlocked was built with the aim to help tackle issues presented by utilising component libraries, especially tackling the pain points you get when trying to transition your product into using a design system. 
 

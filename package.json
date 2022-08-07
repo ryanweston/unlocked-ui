@@ -1,6 +1,6 @@
 {
   "name": "@unlocked/base",
-  "version": "0.0.1-beta.8",
+  "version": "0.0.1-beta.9",
   "description": "Unlocked component library built with Tailwind & Vue.",
   "author": "Ryan Weston",
   "main": "./dist/esm/index.js",

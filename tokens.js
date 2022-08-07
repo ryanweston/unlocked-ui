@@ -16,7 +16,7 @@ module.exports = {
   interactiveVariant: '#b1b1b1', // Variant interactive elements
   focusOne: '#0a5fff', // Focus for border and underline
   actionWarning: '#dd8a3d', // Warning element colour
-  hoverInterface: '#1e1e1e', // Hover on interface elements
+  hoverInterface: '#121212', // Hover on interface elements
   focusTwo: '#ffffff', // Focus for high contrast elements
   activeInterface: '#9a9a9a', // Active interface elements
   disabledBackground: '#1b1b1b', // Disabled element background

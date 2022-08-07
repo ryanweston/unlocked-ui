@@ -22,7 +22,7 @@ if (props.class)
 </script>
 
 <script lang="ts">
-export default { name: 'u-headline' }
+export default { name: 'Headline' }
 </script>
 
 <!-- TODO: Render different heading depending on the size prop -->

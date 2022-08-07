@@ -6,17 +6,14 @@
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    UButton: typeof import('@unlocked/foundation')['UButton']
-    UDropdown: typeof import('@unlocked/foundation')['UDropdown']
-    UDropdownItem: typeof import('@unlocked/foundation')['UDropdownItem']
-    UMenuItem: typeof import('@unlocked/foundation')['UMenuItem']
-    UTooltip: typeof import('@unlocked/foundation')['UTooltip']
-    ULink: typeof import('@unlocked/foundation')['ULink']
-    UIcon: typeof import('@unlocked/foundation')['UIcon']
-    UHeadline: typeof import('@unlocked/foundation')['UHeadline']
-    USubtitle: typeof import('@unlocked/foundation')['Subtitle']
-    UBody: typeof import('@unlocked/foundation')['UBody']
-    UCaption: typeof import('@unlocked/foundation')['UCaption']
+    UButton: typeof import('@unlocked/base')['UButton']
+    UTooltip: typeof import('@unlocked/base')['UTooltip']
+    ULink: typeof import('@unlocked/base')['ULink']
+    UIcon: typeof import('@unlocked/base')['UIcon']
+    UHeadline: typeof import('@unlocked/base')['UHeadline']
+    USubtitle: typeof import('@unlocked/base')['USubtitle']
+    UBody: typeof import('@unlocked/base')['UBody']
+    UCaption: typeof import('@unlocked/base')['UCaption']
   }
 }
 

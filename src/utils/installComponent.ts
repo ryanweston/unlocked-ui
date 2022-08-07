@@ -5,7 +5,7 @@ export const installComponent = <T, E extends Record<string, any>>(main: T, extr
   (main as SFCWithInstall<T>).install = (app: App): void => {
     // structure as array in case any extras need adding to parameters
     for (const component of [main, ...Object.values(extra ?? {})])
-      app.component(component.name as string, component)
+      app.component(`U${component.name}` as string, component)
   }
 
   if (extra) {

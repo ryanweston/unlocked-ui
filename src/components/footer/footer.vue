@@ -13,7 +13,7 @@ const classes = styles
 </script>
 
 <script lang="ts">
-export default { name: 'u-footer' }
+export default { name: 'Footer' }
 </script>
 
 <template>

@@ -69,7 +69,7 @@ const classes = computed(() => {
 </script>
 
 <script lang="ts">
-export default { name: 'u-button' }
+export default { name: 'Button' }
 </script>
 
 <template>

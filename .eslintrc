@@ -1,7 +1,7 @@
 {
   "extends": "@antfu",
   "rules": {
-    "vue/component-definition-name-casing": ["error", "kebab-case"],
+    "vue/component-definition-name-casing": ["error", "PascalCase"],
   },
   "ignorePatterns": [
       "node_modules",

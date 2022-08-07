@@ -34,7 +34,7 @@ const classes = computed(() => {
 </script>
 
 <script lang="ts">
-export default { name: 'u-link' }
+export default { name: 'Link' }
 </script>
 
 <template>

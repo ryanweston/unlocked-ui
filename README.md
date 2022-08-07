@@ -70,7 +70,7 @@ yarn add @unlocked/foundation
  With global registration, your components don't need to be imported! If you want a modular apporach, please refer to our [official documentation](docs.unlocked.to).
  
  ```html
-<u-button>Button</u-button>
+<UButton>Button</UButton>
 ```
 
 ### Customisation

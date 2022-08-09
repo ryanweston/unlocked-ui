@@ -27,4 +27,5 @@ export const Default = Template.bind({})
 Default.args = {
   bottom: true,
   default: 'Tooltip',
+  hover: true,
 }

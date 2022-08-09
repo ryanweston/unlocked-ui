@@ -8,7 +8,11 @@ export default {
   argTypes: {
     type: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'variant', 'success', 'error'],
+      options: ['primary', 'secondary', 'variant', 'success', 'error', 'text'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'medium', 'large'],
     },
   },
 } as Meta
@@ -43,6 +47,7 @@ export const Group = Template.bind({})
 Primary.args = {
   type: 'primary',
   default: 'Button',
+  size: 'medium',
 }
 
 Secondary.args = {

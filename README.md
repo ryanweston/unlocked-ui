@@ -96,6 +96,19 @@ Message types:
 - style
 - test
 
+### Build
+Ensure all packages are installed.
+
+```console
+yarn
+```
+
+Build the library
+
+```console
+yarn build:lib
+```
+
 ### Storybook
 Please ensure that Storybook's static build has been tested before you push to master.
 

@@ -62,7 +62,7 @@ export default { name: 'Icon' }
     v-else
     xmlns="http://www.w3.org/2000/svg"
     :fill="props.color ? props.color : 'currentColor'"
-    :className="classes"
+    :class="classes"
     viewBox="0 0 24 24"
     :width="props.width ? props.width : sizes[props.size]"
     :height="props.height ? props.height : sizes[props.size]"

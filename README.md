@@ -32,7 +32,7 @@ Unlocked is an experimental Tailwind based component library built for Vue 3. Pr
 - 🧱 Atomic interface components
 - 🎨 Theming system
 - 📚 Custom tokens
-- 🦄 Easy integration with UI kit
+- 🦄 Easy integration with Figma
 
 ## 📦 Getting started
 

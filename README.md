@@ -1,3 +1,5 @@
+⚠️ This is an unmaintained university project.
+
 <p align="center">
   <a href="https://unlocked.to" target="_blank">
     <img alt="Unlocked logo" width="100" src="https://unlocked.to/images/logo/logo-dark.svg">
